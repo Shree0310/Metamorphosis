@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf3ef;
+  --foreground: #2b2420;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-baloo: var(--font-baloo);
+  --font-kalam: var(--font-kalam);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-kalam), cursive;
+  text-wrap: pretty;
+}
+
+a {
+  color: #C2445B;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF6F81;
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: floatY 7s ease-in-out infinite;
+}
+
+/* Reveal on scroll */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Button press animations */
+button {
+  transition: transform 0.1s ease-out;
+}
+
+button:active {
+  transform: scale(0.96);
+}
