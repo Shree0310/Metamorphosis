@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const services = [
   {
@@ -81,7 +82,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-[#EDE6D8] bg-[#FDFBF7] px-5 py-5 sm:px-8 lg:px-16">
         <div className="flex flex-wrap items-center justify-between gap-5">
-          <span className="flex items-center gap-4">
+          <Link href="/" className="flex items-center gap-4 hover:no-underline">
             <Image
               src="/logopng.png"
               alt="Metamorphosis Therapy logo"
@@ -89,14 +90,14 @@ export default function Home() {
               height={32}
               className="block h-8 w-auto"
             />
-            <span className="text-lg tracking-tight" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}>
+            <span className="text-lg tracking-tight text-[#2B2420]" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}>
               Metamorphosis Therapy Initiative
             </span>
-          </span>
+          </Link>
           <div className="flex flex-wrap items-center gap-7">
-            <a href="#about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
+            <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
               About
-            </a>
+            </Link>
             <a href="#services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
               Services
             </a>
@@ -150,7 +151,7 @@ export default function Home() {
               className="mb-5 text-3xl leading-tight lg:text-4xl"
               style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
             >
-              Understanding Our Journey
+              Understanding Our <span className="text-[#4ECDC4]">Journey</span>
             </h2>
             <p className="max-w-prose text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
               There are times when we are in touch with a deeper voice within us calling for change — something in us wants to move past repetitive patterns that keep us from living, feeling, and being our most authentic selves. This is a space to listen to that inner voice.
@@ -226,7 +227,7 @@ export default function Home() {
                 className="m-0 text-3xl leading-tight lg:text-4xl"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
               >
-                Hi, I'm Kuntal (she/her).
+                Hi, I'm <span className="text-[#FF6F81]">Kuntal</span> (she/her).
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
                 I'm a Counseling Psychologist running an online private practice — individual and couples therapy for Indian adults, wherever you are in the world. All you need is a private corner, a decent connection, and a working camera and mic.
@@ -237,7 +238,7 @@ export default function Home() {
               <div className="mt-6">
                 <a
                   href="#"
-                  className="inline-flex border-2 border-[#2B2420] bg-transparent px-6 py-3 text-[#2B2420] hover:bg-[#2B2420] hover:text-white hover:no-underline"
+                  className="inline-flex border-2 border-[#2B2420] bg-transparent px-6 py-3 text-[#2B2420] hover:bg-[#2B2420] hover:text-white hover:no-underline transition-transform duration-100 active:scale-95"
                   style={{ fontWeight: 700, fontSize: '14.5px' }}
                 >
                   Know more about me
@@ -302,7 +303,7 @@ export default function Home() {
             className="mb-10 text-3xl lg:text-4xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
-            Services
+            <span className="text-[#C7CEEA]">Services</span>
           </h2>
 
           <div className="flex flex-col gap-16">
@@ -352,7 +353,7 @@ export default function Home() {
             className="mb-6 text-3xl lg:text-4xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
-            You might be wondering…
+            You might be <span className="text-[#FFE66D]">wondering</span>…
           </h2>
 
           <div className="flex flex-col gap-3">
@@ -394,7 +395,7 @@ export default function Home() {
             className="m-0 mx-auto max-w-[18ch] text-3xl leading-tight text-[#2B2420] lg:text-4xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
-            Let's rediscover your story, together.
+            Let's rediscover your <span className="text-[#FF8B94]">story</span>, together.
           </h3>
           <p className="mx-auto mt-4 max-w-prose text-lg leading-relaxed text-[#3F3A50]" style={{ fontWeight: 500 }}>
             Book a free intro call and see if we're a good fit — no commitment, just a conversation.

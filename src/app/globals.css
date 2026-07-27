@@ -73,3 +73,12 @@ a:hover {
   opacity: 1;
   transform: none;
 }
+
+/* Button press animations */
+button {
+  transition: transform 0.1s ease-out;
+}
+
+button:active {
+  transform: scale(0.96);
+}
