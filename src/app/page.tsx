@@ -104,13 +104,13 @@ export default function Home() {
             <a href="#faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
               FAQ
             </a>
-            <button
-              type="button"
-              className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 text-[#FFFBF2] hover:bg-[#C2445B]"
-              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px' }}
+            <Link
+              href="/book-now"
+              className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', borderRadius: 0, color: '#FFFFFF' }}
             >
               Book a Session
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
