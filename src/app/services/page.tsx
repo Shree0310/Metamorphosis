@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 const services = [
   {
-    kicker: "Individual Therapy",
+    kicker: "INDIVIDUAL THERAPY",
     title: "Individual Therapy",
     quote: "The curious paradox is that when I accept myself just as I am, then I can change",
     author: "Carl Rogers",
@@ -27,7 +27,7 @@ const services = [
     bg: "#FBF3EF",
   },
   {
-    kicker: "Couples Therapy",
+    kicker: "COUPLES THERAPY",
     title: "Couples Therapy",
     quote: "The people we love are the hidden regulators of our bodily processes and our emotional lives. When love doesn't work, we hurt",
     author: "Dr. Sue Johnson",
@@ -43,7 +43,7 @@ const services = [
     bg: "#FDEEEF",
   },
   {
-    kicker: "Supervision",
+    kicker: "SUPERVISION",
     title: "Supervision",
     quote: "Drop the details, look for patterns",
     author: "Kuntal Vora",
@@ -113,11 +113,11 @@ export default function ServicesPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-[#FDEEEF] text-center" style={{ padding: 'calc(3 * 28px) clamp(20px, 5vw, 72px)' }}>
-        <span className="block text-sm uppercase text-[#C2445B]" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 16px' }}>
-          What I offer
+      <section className="text-center" style={{ background: '#FDEEEF', padding: 'calc(3 * 28px) clamp(20px, 5vw, 72px)' }}>
+        <span className="block text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 16px', color: '#C2445B' }}>
+          WHAT I OFFER
         </span>
-        <h1 className="m-0" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(32px, 4.4vw, 50px)', lineHeight: 1.2, letterSpacing: '-0.01em' }}>
+        <h1 className="m-0" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(32px, 4.4vw, 50px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420' }}>
           Services
         </h1>
       </section>
@@ -162,10 +162,10 @@ export default function ServicesPage() {
                 <h3 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '36px 0 20px' }}>
                   {service.areasLabel}
                 </h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '14px 24px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px 24px' }}>
                   {service.areas.map((area, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: '10px' }}>
-                      <span style={{ width: '8px', height: '8px', flex: '0 0 auto', background: '#FF6F81' }}></span>
+                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                      <span style={{ width: '6px', height: '6px', flex: '0 0 auto', background: '#C2445B', marginTop: '7px' }}></span>
                       <span style={{ fontSize: '17px', lineHeight: 1.5, color: '#4A3F36' }}>
                         {area}
                       </span>
