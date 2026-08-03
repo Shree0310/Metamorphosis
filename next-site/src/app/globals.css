@@ -34,6 +34,15 @@ a:hover {
   text-decoration: underline;
 }
 
+header a, nav a, .header-cta {
+  color: inherit;
+}
+
+header a:hover, nav a:hover, .header-cta:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

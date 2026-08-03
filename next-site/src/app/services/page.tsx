@@ -43,7 +43,7 @@ export default function ServicesPage() {
             “The curious paradox is that when I accept myself just as I am, then I can change” — Carl Rogers
           </p>
           <p className="mt-5 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
-            Individual therapy helps people gain an in-depth understanding of themselves. During these sessions, we address emotions, thoughts, and behaviors. These sessions help individuals understand their interpersonal and emotional patterns and learn effective ways of managing them.
+            Individual therapy helps people to gain an in-depth understanding of themselves. During these sessions, we address emotions, thoughts, and behaviors. These sessions help individuals to understand their interpersonal and emotional patterns and learn effective ways of managing them.
           </p>
 
           <div className="mt-10 rounded-[2rem] border border-[#FDE68A] bg-white p-8 sm:p-10">
@@ -51,13 +51,13 @@ export default function ServicesPage() {
               Areas that I work with
             </h2>
             <ul className="mt-6 list-disc space-y-3 pl-6 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
-              <li>Interpersonal relationship difficulties</li>
+              <li>Interpersonal Relationship Difficulties</li>
               <li>Childhood trauma</li>
-              <li>Grief and loss</li>
+              <li>Grief and Loss</li>
               <li>Abuse</li>
               <li>Navigating attachment patterns</li>
               <li>Work life balance</li>
-              <li>Life transitions</li>
+              <li>Life Transitions</li>
               <li>Neurodivergence (ADHD and Autism)</li>
               <li>Queer affirming care</li>
             </ul>
@@ -71,7 +71,32 @@ export default function ServicesPage() {
               “The people we love are the hidden regulators of our bodily processes and our emotional lives. When love doesn’t work, we hurt” — Dr. Sue Johnson
             </p>
             <p className="mt-4 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
-              Couples Therapy helps partners communicate their feelings and needs to each other without fear of being criticized and/or attacked. It offers them a space to understand each other and communicate better by learning skills of interpersonal effectiveness.
+              Couples Therapy helps partners to communicate their feelings and needs to each other without the fear of being criticized and/or attacked. It offers them a space to understand each other and communicate better by learning skills of interpersonal effectiveness.
+            </p>
+
+            <h3 className="mt-10 text-2xl leading-tight" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700 }}>
+              Areas where couples counseling may be helpful
+            </h3>
+            <ul className="mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+              <li>Premarital Counseling</li>
+              <li>Communication Barrier</li>
+              <li>Drifting away from each other</li>
+              <li>Repair from affair and betrayal</li>
+            </ul>
+          </div>
+
+          <div className="mt-10 rounded-[2rem] border border-[#FDE68A] bg-white p-8 sm:p-10">
+            <h2 className="text-3xl leading-tight" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700 }}>
+              Supervision
+            </h2>
+            <p className="mt-5 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+              “Drop the details, look for patterns” — Kuntal Vora
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+              Supervision helps in facilitating professional and personal growth of therapists. It involves self reflecting of the work done by the therapists in therapeutic sessions. By pooling in resources, the goal of supervision is to achieve better client outcomes. The supervision also focuses on therapists’ self to reduce burnout.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+              I provide individual as well as group supervision.
             </p>
           </div>
         </div>
