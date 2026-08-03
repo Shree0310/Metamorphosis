@@ -93,14 +93,14 @@ export default function ServicesPage() {
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: '28px', flexWrap: 'wrap' }}>
-          <Link href="/#about" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
+          <Link href="/" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
             Home
           </Link>
           <Link href="/services" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
             Services
           </Link>
-          <Link href="/#faq" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
-            FAQ
+          <Link href="/about" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
+            About
           </Link>
           <Link
             href="/book-now"
