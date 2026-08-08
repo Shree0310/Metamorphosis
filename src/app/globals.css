@@ -91,3 +91,42 @@ button {
 button:active {
   transform: scale(0.96);
 }
+
+/* Cal.com Light Theme Overrides */
+/* Force light theme for all Cal.com embedded components */
+[class*="cal-"] {
+  color-scheme: light !important;
+}
+
+/* Override dark mode backgrounds */
+[data-cal-namespace] {
+  background: #ffffff !important;
+  color: #2b2420 !important;
+}
+
+/* Success/confirmation page overrides */
+[data-cal-namespace] [class*="dark"] {
+  background: #ffffff !important;
+  color: #2b2420 !important;
+}
+
+/* Text and heading overrides */
+[data-cal-namespace] h1,
+[data-cal-namespace] h2,
+[data-cal-namespace] h3,
+[data-cal-namespace] h4,
+[data-cal-namespace] p,
+[data-cal-namespace] span,
+[data-cal-namespace] div {
+  color: #2b2420 !important;
+}
+
+/* Card/container backgrounds */
+[data-cal-namespace] [class*="bg-"] {
+  background: #ffffff !important;
+}
+
+/* Remove any dark overlays or backgrounds */
+[data-cal-namespace] [style*="background"] {
+  background: #ffffff !important;
+}
