@@ -135,6 +135,107 @@ export default function AboutPageContent() {
         </div>
       </section>
 
+      <section data-reveal className="px-5 py-20 sm:px-8 lg:px-16">
+        <div className="mx-auto max-w-6xl">
+          <span className="mb-4 block text-sm uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
+            Education & Certifications
+          </span>
+          <p className="mb-10 max-w-3xl text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+            Every certification below reflects a deliberate commitment - to keep learning, stay current, and bring the best of evidence-based practice into every session.
+          </p>
+
+          {/* Education */}
+          <div className="mb-12">
+            <h3 className="mb-6 text-3xl" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, color: '#2B2420' }}>
+              Education
+            </h3>
+            <div className="grid gap-x-8 gap-y-4 md:grid-cols-2">
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Masters in Counseling Psychology</strong> - SNDT University (2013 – 2015)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Bachelors in Psychology</strong> - Mumbai University (2010 – 2013)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Postgraduation Diploma in Counseling Psychology</strong> - Prafulta, Centre for Psychological Wellbeing (2017 – 2018)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Certifications & Trainings */}
+          <div>
+            <h3 className="mb-6 text-3xl" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, color: '#2B2420' }}>
+              Additional Certifications & Trainings
+            </h3>
+            <div className="grid gap-x-8 gap-y-4 md:grid-cols-2">
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Fellowship in Indian Couple Therapy</strong> - Raising Family Academy (Currently pursuing, 2027)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Integral Somatic Psychotherapy (ISP)</strong> - Prafulta, Centre for Psychological Wellbeing (Currently in training, 2027)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Diploma in Supervision using Narrative Ideas & Practices</strong> - Narrative Practices India (NPI) (2026)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Externship in Emotionally Focused Therapy</strong> - ICEEFT (2025)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Certificate of Attainment in RiseUp Supervision</strong> - Indian Academy of Professional Supervisors (2024)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>South Asian Diploma in Narrative Ideas and Practices</strong> - Narrative Practices India (NPI) (2022)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Queer Affirmative Counseling Practices</strong> - Mariwala Health Initiative (MHI) (2021)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Postgraduate Certificate in Attachment Theory</strong> - International Attachment Network (IAN) (2021)
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-[#C2445B]" style={{ fontWeight: 700 }}>→</span>
+                <p className="m-0 text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+                  <strong>Certificate in Trauma Informed Care</strong> - The Alternative Story (2020)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#FDEEEF]">
         <div data-reveal className="mx-auto max-w-4xl px-5 py-20 sm:px-8 lg:px-16">
           <span className="mb-4 block text-sm uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
