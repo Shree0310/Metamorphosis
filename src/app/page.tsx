@@ -90,9 +90,9 @@ export default function Home() {
             <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
             </Link>
-            <a href="#faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               FAQ
-            </a>
+            </Link>
             <Link
               href="/book-now"
               className="header-cta cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
@@ -226,7 +226,7 @@ export default function Home() {
               <div className="mt-6">
                 <a
                   href="#"
-                  className="inline-flex border-2 border-[#2B2420] bg-transparent px-6 py-3 text-[#2B2420] hover:bg-[#2B2420] hover:text-white hover:no-underline transition-transform duration-100 active:scale-95"
+                  className="inline-flex border-2 border-[#2B2420] bg-transparent px-6 py-3 text-[#2B2420] hover:bg-[#C2445B] hover:no-underline transition-transform duration-100 active:scale-95"
                   style={{ fontWeight: 700, fontSize: '14.5px' }}
                 >
                   Know more about me
@@ -332,7 +332,7 @@ export default function Home() {
                   <p className="max-w-prose text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
                     {service.copy}
                   </p>
-                  <a href="#" className="mt-4 inline-block text-sm hover:underline" style={{ fontWeight: 700 }}>
+                  <a href="/services" className="mt-4 inline-block text-sm hover:underline" style={{ fontWeight: 700 }}>
                     Know more →
                   </a>
                 </div>
@@ -437,13 +437,13 @@ export default function Home() {
             Book a free intro call and see if we're a good fit — no commitment, just a conversation.
           </p>
           <div className="mt-6">
-            <button
-              type="button"
-              className="cursor-pointer border-0 bg-[#2B2420] px-7 py-3 text-[#FFFBF2] hover:bg-[#4A3F36]"
-              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px' }}
+            <Link
+              href="/book-now"
+              className="inline-block cursor-pointer border-0 bg-[#2B2420] px-7 py-3 text-[#FFFBF2] hover:bg-[#4A3F36] hover:no-underline"
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', textDecoration: 'none' }}
             >
               Book a Session
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -476,6 +476,9 @@ export default function Home() {
           Online services are not suitable for crises or emergencies. Please visit your nearest mental health center or a helpline if you need immediate support.
         </p>
         <div className="mt-4 flex flex-wrap gap-5">
+          <Link href="/faq" className="text-xs text-[#8A7B6C] hover:underline">
+            FAQ
+          </Link>
           <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
             Privacy Policy
           </a>

@@ -87,7 +87,10 @@ export default function BookNowPage() {
           <Link href="/services" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
             Services
           </Link>
-          <span style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
+          <Link href="/faq" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
+            FAQ
+          </Link>
+          <span className="inline-block" style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', textDecoration: 'none' }}>
             Book a Session
           </span>
         </div>
@@ -385,6 +388,7 @@ export default function BookNowPage() {
           Online services are not suitable for crises or emergencies. Please visit your nearest mental health center or a helpline if you need immediate support.
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '16px' }}>
+          <Link href="/faq" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>FAQ</Link>
           <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Privacy Policy</a>
           <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Terms of Service</a>
           <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Cancellation Policy</a>

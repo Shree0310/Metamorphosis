@@ -85,6 +85,9 @@ export default function AboutPageContent() {
             <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
             </Link>
+            <Link href="/faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+              FAQ
+            </Link>
             <Link
               href="/book-now"
               className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
@@ -420,6 +423,9 @@ export default function AboutPageContent() {
           Online services are not suitable for crises or emergencies. Please visit your nearest mental health center or a helpline if you need immediate support.
         </p>
         <div className="mt-4 flex flex-wrap gap-5">
+          <Link href="/faq" className="text-xs text-[#8A7B6C] hover:underline">
+            FAQ
+          </Link>
           <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
             Privacy Policy
           </a>
