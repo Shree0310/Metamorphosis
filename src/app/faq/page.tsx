@@ -41,7 +41,7 @@ const faqs: FAQ[] = [
     id: "therapy-end",
     category: "About Therapy",
     question: "When and how does therapy end?",
-    answer: "Unless something unpredictable happens, the ending of therapy will be discussed and planned. It is very important to end relationships well, however life doesn't always offer this opportunity. This is one of those relationships when it is within our ability to make sure the well contained ending is the case. Good endings can give us the lived experience of recognising it is ok for things to come to a close and it doesn't need to be because things are wrong or because we have had a difficult experience. Having an ending session gives us a chance to acknowledge, review and consolidate the work we have done and explore how you can continue to support yourself. You may end our work together at any time. We usually set a mutually agreed date to terminate psychotherapy, nearing which we reflect on our journey together, what changes you have observed in yourself, and the differences in your patterns and interactions.\n\nYou are welcome to share any feedback and insights regarding my website, practice and ethics, and/or our work together either publicly or privately (via email)."
+    answer: "Therapy concludes when you feel ready, and whenever possible, we'll plan this transition together. While life sometimes brings unexpected changes, I believe in creating intentional, thoughtful endings to our therapeutic relationship.\n\nA planned conclusion allows us to:\n• Reflect on the progress you've made and the insights you've gained\n• Acknowledge the work we've done together\n• Identify strategies for continuing your growth independently\n• Honor the significance of our therapeutic relationship\n\nYou're always in control — you can choose to end therapy at any point. When we work toward a planned ending, we'll collaboratively decide on a final session date. During this time, we'll look back at your journey, celebrate the changes you've noticed in yourself, and explore how your patterns and relationships have evolved.\n\nI welcome your feedback about our work together, my practice, or this website — whether shared publicly or privately via email."
   },
   // About My Practice
   {
@@ -90,7 +90,7 @@ const faqs: FAQ[] = [
     id: "practice-not-work-with",
     category: "About My Practice",
     question: "Who do you not work with?",
-    answer: "I would like to share that my current practice areas do not include eating disorders, psychotic disorders such as schizophrenia or schizoaffective disorder, OCD and personality disorders. I want to ensure that you receive the most appropriate and specialized support for your needs, so in these situations, I would encourage connecting with a mental health professional who has specific experience in these areas. I would be happy to guide you toward appropriate resources where possible."
+    answer: "My current practice focus means I don't work with eating disorders, psychotic disorders (including schizophrenia and schizoaffective disorder), OCD, or personality disorders.\n\nThese concerns deserve specialized care from professionals with specific training in these areas. I'm happy to help you find appropriate resources and connect you with therapists who have the expertise you need."
   },
   {
     id: "practice-feel-better",

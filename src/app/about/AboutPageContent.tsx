@@ -99,16 +99,90 @@ export default function AboutPageContent() {
         </div>
       </nav>
 
-      <section className="bg-[#FDEEEF] px-5 py-24 text-center sm:px-8 lg:px-16">
-        <p
-          className="m-0 mx-auto text-3xl italic leading-tight text-[#2B2420] sm:text-4xl lg:text-5xl"
-          style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600 }}
+      <section className="relative bg-[#FDEEEF] px-5 py-24 text-center sm:px-8 lg:px-16" style={{ overflow: 'hidden' }}>
+        {/* Decorative Elements */}
+        <svg
+          className="absolute left-[6%] top-14 h-11 w-11 opacity-40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#98D8C8"
+          strokeWidth="2"
+          style={{ animation: 'floatY 7.5s ease-in-out infinite' }}
         >
-          "It's the relationship that heals."
-        </p>
-        <p className="mt-5 text-sm uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
-          — Irvin Yalom
-        </p>
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+
+        <svg
+          className="absolute right-[10%] top-12 h-10 w-10 opacity-35"
+          viewBox="0 0 24 24"
+          fill="#F6BD60"
+          style={{ animation: 'floatY 8.5s ease-in-out infinite', animationDelay: '0.7s' }}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="#FDEEEF" strokeWidth="2" strokeLinecap="round" fill="none" />
+          <circle cx="9" cy="9" r="1.5" fill="#FDEEEF" />
+          <circle cx="15" cy="9" r="1.5" fill="#FDEEEF" />
+        </svg>
+
+        <svg
+          className="absolute left-[15%] bottom-14 h-12 w-12 opacity-35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#84A59D"
+          strokeWidth="1.5"
+          style={{ animation: 'floatY 9s ease-in-out infinite', animationDelay: '1.2s' }}
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        </svg>
+
+        <svg
+          className="absolute right-[7%] bottom-16 h-9 w-9 opacity-40"
+          viewBox="0 0 24 24"
+          fill="#E5989B"
+          style={{ animation: 'floatY 7s ease-in-out infinite', animationDelay: '1.8s' }}
+        >
+          <path d="M4 4h16v16H4z" transform="rotate(45 12 12)" />
+        </svg>
+
+        <svg
+          className="absolute left-[8%] top-1/2 h-8 w-8 opacity-30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#B5838D"
+          strokeWidth="2"
+          style={{ animation: 'floatY 8s ease-in-out infinite', animationDelay: '2.3s' }}
+        >
+          <polygon points="12,2 2,12 12,22 22,12" />
+        </svg>
+
+        <svg
+          className="absolute right-[5%] top-1/3 h-10 w-10 opacity-35"
+          viewBox="0 0 24 24"
+          fill="#FFCDB2"
+          style={{ animation: 'floatY 6.5s ease-in-out infinite', animationDelay: '0.3s' }}
+        >
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+          <path d="M2 17L12 22L22 17" />
+        </svg>
+
+        <div className="relative z-10">
+          <p
+            className="m-0 mx-auto text-3xl italic leading-tight text-[#2B2420] sm:text-4xl lg:text-5xl"
+            style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600 }}
+          >
+            "It's the relationship that heals."
+          </p>
+          <p className="mt-5 text-sm uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
+            — Irvin Yalom
+          </p>
+        </div>
+
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes floatY {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+          }
+        `}} />
       </section>
 
       <section className="px-5 py-20 sm:px-8 lg:px-16">

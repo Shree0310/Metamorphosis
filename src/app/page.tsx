@@ -105,8 +105,74 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 lg:px-16 lg:py-24">
-        <div>
+      <section className="relative mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 lg:px-16 lg:py-24" style={{ overflow: 'hidden' }}>
+        {/* Decorative Elements */}
+        <svg
+          className="absolute left-[3%] top-8 h-10 w-10 opacity-30"
+          viewBox="0 0 24 24"
+          fill="#FFD6A5"
+          style={{ animation: 'floatY 8.5s ease-in-out infinite' }}
+        >
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+
+        <svg
+          className="absolute right-[5%] top-12 h-12 w-12 opacity-35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#C9ADA7"
+          strokeWidth="1.5"
+          style={{ animation: 'floatY 7.5s ease-in-out infinite', animationDelay: '0.5s' }}
+        >
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+
+        <svg
+          className="absolute left-[8%] bottom-14 h-9 w-9 opacity-30"
+          viewBox="0 0 24 24"
+          fill="#CAFFBF"
+          style={{ animation: 'floatY 9s ease-in-out infinite', animationDelay: '1s' }}
+        >
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+          <path d="M2 17L12 22L22 17" />
+          <path d="M2 12L12 17L22 12" />
+        </svg>
+
+        <svg
+          className="absolute right-[10%] bottom-10 h-11 w-11 opacity-35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#9BF6FF"
+          strokeWidth="2"
+          style={{ animation: 'floatY 7s ease-in-out infinite', animationDelay: '1.5s' }}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 14s1.5 2 4 2 4-2 4-2" strokeLinecap="round" />
+          <circle cx="9" cy="9" r="1" fill="#9BF6FF" />
+          <circle cx="15" cy="9" r="1" fill="#9BF6FF" />
+        </svg>
+
+        <svg
+          className="absolute left-[15%] top-1/3 h-8 w-8 opacity-30"
+          viewBox="0 0 24 24"
+          fill="#FDFFB6"
+          style={{ animation: 'floatY 8s ease-in-out infinite', animationDelay: '2s' }}
+        >
+          <rect x="4" y="4" width="16" height="16" rx="2" />
+        </svg>
+
+        <svg
+          className="absolute right-[3%] top-1/2 h-10 w-10 opacity-35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FFD6E8"
+          strokeWidth="2"
+          style={{ animation: 'floatY 6.5s ease-in-out infinite', animationDelay: '0.8s' }}
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+
+        <div className="relative z-10">
           <h1
             className="m-0 text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, letterSpacing: '-0.01em' }}
@@ -123,6 +189,13 @@ export default function Home() {
             </span>
           </p>
         </div>
+
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes floatY {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+          }
+        `}} />
       </section>
 
       {/* Journey Section */}
@@ -285,8 +358,113 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="px-5 py-16 sm:px-8 lg:px-16">
-        <div className="mx-auto max-w-6xl">
+      <section id="services" className="relative px-5 py-16 sm:px-8 lg:px-16" style={{ overflow: 'hidden' }}>
+        {/* Decorative Elements */}
+        <svg
+          className="absolute left-[2%] top-8 h-11 w-11 opacity-25"
+          viewBox="0 0 24 24"
+          fill="#BDB2FF"
+          style={{ animation: 'floatY 7.5s ease-in-out infinite' }}
+        >
+          <circle cx="12" cy="12" r="10" />
+        </svg>
+
+        <svg
+          className="absolute right-[4%] top-16 h-9 w-9 opacity-30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#A0C4FF"
+          strokeWidth="2"
+          style={{ animation: 'floatY 8.5s ease-in-out infinite', animationDelay: '0.6s' }}
+        >
+          <path d="M12 2l1.8 5.6H20l-4.8 3.5L17 17l-5-3.6L7 17l1.8-5.9L4 7.6h6.2z" />
+        </svg>
+
+        <svg
+          className="absolute left-[6%] bottom-20 h-10 w-10 opacity-25"
+          viewBox="0 0 24 24"
+          fill="#FFADAD"
+          style={{ animation: 'floatY 9s ease-in-out infinite', animationDelay: '1.2s' }}
+        >
+          <rect x="4" y="4" width="16" height="16" rx="3" />
+        </svg>
+
+        <svg
+          className="absolute right-[8%] bottom-24 h-12 w-12 opacity-30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FFC6FF"
+          strokeWidth="1.5"
+          style={{ animation: 'floatY 7s ease-in-out infinite', animationDelay: '1.8s' }}
+        >
+          <polygon points="12,2 2,12 12,22 22,12" />
+        </svg>
+
+        <svg
+          className="absolute left-[15%] top-1/3 h-10 w-10 opacity-28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FFD98E"
+          strokeWidth="2"
+          style={{ animation: 'floatY 8s ease-in-out infinite', animationDelay: '0.3s' }}
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+
+        <svg
+          className="absolute right-[12%] top-1/2 h-9 w-9 opacity-25"
+          viewBox="0 0 24 24"
+          fill="#C9F0FF"
+          style={{ animation: 'floatY 7.8s ease-in-out infinite', animationDelay: '1.4s' }}
+        >
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+          <path d="M2 17L12 22L22 17" />
+        </svg>
+
+        <svg
+          className="absolute left-[3%] top-1/2 h-8 w-8 opacity-30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#B4A7D6"
+          strokeWidth="1.5"
+          style={{ animation: 'floatY 6.8s ease-in-out infinite', animationDelay: '2.2s' }}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 14s1.5 2 4 2 4-2 4-2" strokeLinecap="round" />
+          <circle cx="9" cy="9" r="1" fill="#B4A7D6" />
+          <circle cx="15" cy="9" r="1" fill="#B4A7D6" />
+        </svg>
+
+        <svg
+          className="absolute right-[2%] bottom-12 h-11 w-11 opacity-28"
+          viewBox="0 0 24 24"
+          fill="#FFE5EC"
+          style={{ animation: 'floatY 7.2s ease-in-out infinite', animationDelay: '0.9s' }}
+        >
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+
+        <svg
+          className="absolute left-[10%] bottom-8 h-9 w-9 opacity-25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#D4F1F4"
+          strokeWidth="2"
+          style={{ animation: 'floatY 8.3s ease-in-out infinite', animationDelay: '1.7s' }}
+        >
+          <rect x="3" y="3" width="18" height="18" rx="4" />
+        </svg>
+
+        <svg
+          className="absolute right-[18%] top-20 h-8 w-8 opacity-30"
+          viewBox="0 0 24 24"
+          fill="#FFF5BA"
+          style={{ animation: 'floatY 6.5s ease-in-out infinite', animationDelay: '0.5s' }}
+        >
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        </svg>
+
+        <div className="relative z-10 mx-auto max-w-6xl">
           <span className="mb-2 block text-xs uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
             What I offer
           </span>

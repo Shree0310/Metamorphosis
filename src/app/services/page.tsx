@@ -116,13 +116,74 @@ export default function ServicesPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="text-center" style={{ background: '#FDEEEF', padding: 'calc(3 * 28px) clamp(20px, 5vw, 72px)' }}>
-        <span className="block text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 16px', color: '#C2445B' }}>
-          WHAT I OFFER
-        </span>
-        <h1 className="m-0" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(32px, 4.4vw, 50px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420' }}>
-          Services
-        </h1>
+      <section className="relative text-center" style={{ background: '#FDEEEF', padding: 'calc(3 * 28px) clamp(20px, 5vw, 72px)', overflow: 'hidden' }}>
+        {/* Decorative Elements */}
+        <svg
+          className="absolute left-[5%] top-10 h-12 w-12 opacity-35"
+          viewBox="0 0 24 24"
+          fill="#FFB347"
+          style={{ animation: 'floatY 8s ease-in-out infinite' }}
+        >
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+        </svg>
+
+        <svg
+          className="absolute right-[8%] top-16 h-10 w-10 opacity-40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#A8DADC"
+          strokeWidth="2"
+          style={{ animation: 'floatY 7s ease-in-out infinite', animationDelay: '0.5s' }}
+        >
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+        </svg>
+
+        <svg
+          className="absolute left-[12%] bottom-12 h-11 w-11 opacity-35"
+          viewBox="0 0 24 24"
+          fill="#E9C46A"
+          style={{ animation: 'floatY 9s ease-in-out infinite', animationDelay: '1s' }}
+        >
+          <polygon points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10" />
+        </svg>
+
+        <svg
+          className="absolute right-[15%] bottom-16 h-9 w-9 opacity-40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#F4A261"
+          strokeWidth="2"
+          style={{ animation: 'floatY 7.5s ease-in-out infinite', animationDelay: '1.5s' }}
+        >
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+          <path d="M2 17L12 22L22 17" />
+          <path d="M2 12L12 17L22 12" />
+        </svg>
+
+        <svg
+          className="absolute right-[5%] top-1/2 h-8 w-8 opacity-35"
+          viewBox="0 0 24 24"
+          fill="#D4A5A5"
+          style={{ animation: 'floatY 6.5s ease-in-out infinite', animationDelay: '2s' }}
+        >
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        </svg>
+
+        <div className="relative z-10">
+          <span className="block text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 16px', color: '#C2445B' }}>
+            WHAT I OFFER
+          </span>
+          <h1 className="m-0" style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(32px, 4.4vw, 50px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420' }}>
+            Services
+          </h1>
+        </div>
+
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes floatY {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+          }
+        `}} />
       </section>
 
       {/* Services Sections */}
