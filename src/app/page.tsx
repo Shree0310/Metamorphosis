@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,26 +34,18 @@ const services = [
   },
 ];
 
-const initialFaqs = [
-  {
-    q: "Is online therapy actually effective?",
-    a: "Yes — for most concerns, research shows online therapy works as well as in-person. What matters more is the fit between us and your consistency in showing up.",
-    open: true,
-  },
-  {
-    q: "Do you only work with clients in India?",
-    a: "I work with Indian adults wherever they are in the world — as long as you have a private space, a stable connection, and a working camera and mic.",
-    open: false,
-  },
-  {
-    q: "What happens in the first session?",
-    a: "We get to know each other. I'll ask about what brought you here, you can ask me anything, and we'll figure out together if this feels like the right fit.",
-    open: false,
-  },
+const values = [
+  { name: "Curiosity", color: "#4ECDC4" },
+  { name: "Compassion", color: "#FF8B94" },
+  { name: "Kindness", color: "#FFE66D" },
+  { name: "Transparency", color: "#C7CEEA" },
+  { name: "Honesty", color: "#FBE0C4" },
+  { name: "Authenticity", color: "#FF6F81" },
+  { name: "Gentleness", color: "#C9EDE8" },
+  { name: "Confidential & Ethical", color: "#DEE1F4" },
 ];
 
 export default function Home() {
-  const [faqs, setFaqs] = useState(initialFaqs);
 
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -74,12 +66,6 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const toggleFaq = (index: number) => {
-    setFaqs((prev) =>
-      prev.map((faq, i) => (i === index ? { ...faq, open: !faq.open } : faq))
-    );
-  };
-
   return (
     <main className="bg-[#FBF3EF] text-[#2B2420]" style={{ fontFamily: 'var(--font-kalam)' }}>
       {/* Navigation */}
@@ -98,13 +84,13 @@ export default function Home() {
             </span>
           </Link>
           <div className="flex flex-wrap items-center gap-7">
-            <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
+            <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               About
             </Link>
-            <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
+            <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
             </Link>
-            <a href="#faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
+            <a href="#faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               FAQ
             </a>
             <Link
@@ -259,38 +245,41 @@ export default function Home() {
               Off the clock
             </span>
             <h2
-              className="m-0 max-w-[26ch] text-3xl leading-tight text-[#2B2420] lg:text-4xl"
+              className="m-0 text-3xl leading-tight text-[#2B2420] lg:text-4xl"
               style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
             >
-              Currently: one Taylor Swift era on repeat, three episodes into a new true-crime series, half-living in somebody's fictional world.
+              When I'm not in session
             </h2>
             <p className="mt-6 max-w-prose text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
-              I bring the same curiosity to your story that I bring to a true-crime rabbit hole — pattern-spotting, plot holes and all. Except here, you're the one who gets to write the ending.
+              I enjoy cooking, documenting memories through journaling and clicking pictures, watching fictional content especially crime based shows, enjoying music, spending time with my family and friends, traveling, yapping with people (when I am comfortable with them), petting cats on streets and taking naps (I take naps very seriously).
             </p>
           </div>
-          <div className="relative p-6">
-            <div className="absolute inset-0 -rotate-2 bg-[#FFE1B8]"></div>
+          <div className="relative">
+            <div className="absolute -left-6 -top-6 -z-10 h-full w-full bg-[#FFE1B8]"></div>
             <Image
               src="/off-the-clock-torn.png"
               alt="Off the clock"
               width={800}
               height={450}
-              className="relative z-10 aspect-video w-full shadow-[0_10px_18px_rgba(120,53,15,0.22)]"
+              className="relative z-10 aspect-video w-full object-cover"
             />
           </div>
         </div>
         <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-2 px-5 pb-16 sm:px-8 lg:px-16">
           <span className="whitespace-nowrap bg-[#FF8B94] px-4 py-2 text-sm text-[#2B2420]" style={{ fontWeight: 700 }}>
-            Swiftie, unapologetically
+            Cooking enthusiast
           </span>
           <span className="whitespace-nowrap bg-[#4ECDC4] px-4 py-2 text-sm text-[#2B2420]" style={{ fontWeight: 700 }}>
-            True-crime obsessive
+            Crime show addict
           </span>
           <span className="whitespace-nowrap bg-[#FFE66D] px-4 py-2 text-sm text-[#2B2420]" style={{ fontWeight: 700 }}>
-            Perpetually mid-rewatch
+            Memory documenter
           </span>
           <span className="whitespace-nowrap bg-[#C7CEEA] px-4 py-2 text-sm text-[#2B2420]" style={{ fontWeight: 700 }}>
-            Lives in fictional worlds
+            Professional napper
+          </span>
+          <span className="whitespace-nowrap bg-[#FFB3BA] px-4 py-2 text-sm text-[#2B2420]" style={{ fontWeight: 700 }}>
+            Street cat petter
           </span>
         </div>
       </section>
@@ -353,47 +342,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="bg-[#FCE4E2]">
-        <div data-reveal className="mx-auto max-w-4xl px-5 py-16 sm:px-8 lg:px-16">
-          <span className="mb-2 block text-xs uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
-            Good questions
-          </span>
-          <h2
-            className="mb-6 text-3xl lg:text-4xl"
-            style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
-          >
-            You might be <span className="text-[#FF6F81]">wondering</span>…
-          </h2>
+      {/* Values Section */}
+      <section className="bg-[#FCE4E2]">
+        <div data-reveal className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-16">
+          <div className="text-center">
+            <span className="mb-2 block text-xs uppercase tracking-widest text-[#C2445B]" style={{ fontWeight: 700 }}>
+              Core values
+            </span>
+            <h2
+              className="mb-4 text-3xl lg:text-4xl"
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
+            >
+              What guides my <span className="text-[#FF6F81]">practice</span>
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+              These values shape every session, every conversation, and every moment we share in our work together.
+            </p>
+          </div>
 
-          <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
-              <div key={i} className="border border-[#FDE68A] bg-white px-6 py-2">
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(i)}
-                  className="flex w-full cursor-pointer items-center justify-between gap-4 border-0 bg-transparent py-3 text-left"
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((value, i) => (
+              <div
+                key={i}
+                className="bg-white p-6 text-center border border-[#FDE68A]"
+                data-reveal
+              >
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center">
+                  {i === 0 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill={value.color} stroke="none">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.35-4.35" stroke="#fff" strokeWidth="2" strokeLinecap="round"></path>
+                    </svg>
+                  )}
+                  {i === 1 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill={value.color} stroke="none">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  )}
+                  {i === 2 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={value.color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2v20M2 12h20"></path>
+                    </svg>
+                  )}
+                  {i === 3 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill={value.color} stroke="#fff" strokeWidth="1.5">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3" fill="#fff"></circle>
+                    </svg>
+                  )}
+                  {i === 4 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={value.color} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  )}
+                  {i === 5 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill={value.color} stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  )}
+                  {i === 6 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill={value.color} stroke="none">
+                      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                    </svg>
+                  )}
+                  {i === 7 && (
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill={value.color} stroke="#fff" strokeWidth="1.5">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  )}
+                </div>
+                <h3
+                  className="text-lg"
+                  style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, color: '#2B2420' }}
                 >
-                  <span
-                    className="text-base"
-                    style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700 }}
-                  >
-                    {faq.q}
-                  </span>
-                  <span className="shrink-0 text-xl text-[#FF6F81]" style={{ fontWeight: 700 }}>
-                    {faq.open ? '−' : '+'}
-                  </span>
-                </button>
-                {faq.open && (
-                  <p className="mb-4 text-base leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>{faq.a}</p>
-                )}
+                  {value.name}
+                </h3>
               </div>
             ))}
-          </div>
-          <div className="mt-6">
-            <a href="#" className="text-sm hover:underline" style={{ fontWeight: 700 }}>
-              Read the full FAQ →
-            </a>
           </div>
         </div>
       </section>

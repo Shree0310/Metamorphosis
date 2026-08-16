@@ -81,22 +81,15 @@ export default function BookNowPage() {
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: '28px', flexWrap: 'wrap' }}>
-          <Link href="/" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
-            Home
+          <Link href="/about" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
+            About
           </Link>
-          <Link href="/services" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
+          <Link href="/services" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
             Services
           </Link>
-          <a href="/#faq" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
-            FAQ
-          </a>
-          <Link
-            href="/book-now"
-            className="inline-block no-underline"
-            style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px' }}
-          >
+          <span style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
             Book a Session
-          </Link>
+          </span>
         </div>
       </nav>
 

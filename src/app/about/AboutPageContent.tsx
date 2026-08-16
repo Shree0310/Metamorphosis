@@ -48,6 +48,18 @@ export default function AboutPageContent() {
   }, []);
 
   return (
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        [data-reveal] {
+          opacity: 0;
+          transform: translateY(26px);
+          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        [data-reveal].revealed {
+          opacity: 1;
+          transform: none;
+        }
+      `}} />
     <main className="bg-[#FBF3EF] text-[#2B2420]" style={{ fontFamily: 'var(--font-kalam)' }}>
       <nav className="sticky top-0 z-50 border-b border-[#EDE6D8] bg-[#FBF3EF] px-5 py-5 sm:px-8 lg:px-16">
         <div className="flex flex-wrap items-center justify-between gap-5">
@@ -67,19 +79,16 @@ export default function AboutPageContent() {
             </span>
           </Link>
           <div className="flex flex-wrap items-center gap-7">
-            <Link href="/" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
-              Home
-            </Link>
-            <Link href="/#services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
+            <span className="text-base text-[#2B2420]" style={{ fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
+              About
+            </span>
+            <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
-            </Link>
-            <Link href="/#faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500 }}>
-              FAQ
             </Link>
             <Link
               href="/book-now"
               className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
-              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', borderRadius: 0, color: '#FFFFFF' }}
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
             >
               Book a Session
             </Link>
@@ -126,7 +135,7 @@ export default function AboutPageContent() {
               Hey! I'm <span className="text-[#FF6F81]">Kuntal Vora</span>.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
-              I go by the pronouns she/her. I'm a Counseling Psychologist and Clinical Supervisor working with individuals and couples — heterosexual and queer — between the ages of 18 and 50. I also provide supervision to early-career and mid-career therapists, one-on-one and in groups.
+              I go by the pronouns she/her. I'm a Counseling Psychologist and Clinical Supervisor. I am neurodivergent. I work with individuals and couples — heterosexual and queer — between the ages of 18 and 50. I also provide supervision to early-career and mid-career therapists, one-on-one and in groups.
             </p>
             <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
               Off the clock: cooking, journaling and photographing memories, true-crime shows, music, time with family and friends, traveling, yapping with people I'm comfortable with, petting every street cat I meet, and taking naps very, very seriously.
@@ -424,5 +433,6 @@ export default function AboutPageContent() {
         <p className="mt-4 text-xs text-[#8A7B6C]" style={{ fontWeight: 500 }}>© 2026 Metamorphosis Therapy Initiative</p>
       </footer>
     </main>
+    </>
   );
 }

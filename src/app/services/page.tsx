@@ -96,19 +96,16 @@ export default function ServicesPage() {
           </span>
         </Link>
         <div style={{ display: 'flex', alignItems: 'center', gap: '28px', flexWrap: 'wrap' }}>
-          <Link href="/" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
-            Home
-          </Link>
-          <Link href="/services" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
-            Services
-          </Link>
-          <Link href="/about" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420' }}>
+          <Link href="/about" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
             About
           </Link>
+          <span style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
+            Services
+          </span>
           <Link
             href="/book-now"
             className="inline-block no-underline"
-            style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px' }}
+            style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', textDecoration: 'none' }}
           >
             Book a Session
           </Link>
