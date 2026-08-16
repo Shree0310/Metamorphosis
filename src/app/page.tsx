@@ -12,6 +12,7 @@ const services = [
     blockColor: "#C9EDE8",
     direction: "ltr",
     slideFrom: "translateX(-36px)",
+    image: "/Individual_Therapy2.jpeg",
   },
   {
     kicker: "Couples Therapy",
@@ -20,6 +21,7 @@ const services = [
     blockColor: "#FBE0C4",
     direction: "rtl",
     slideFrom: "translateX(36px)",
+    image: "/Couples_Therapy2.jpeg",
   },
   {
     kicker: "Therapist Support & Supervision",
@@ -28,6 +30,7 @@ const services = [
     blockColor: "#E4E1F5",
     direction: "ltr",
     slideFrom: "translateX(-36px)",
+    image: "/Supervision.jpeg",
   },
 ];
 
@@ -151,8 +154,14 @@ export default function Home() {
             </p>
           </div>
           <div className="relative">
-            <div className="absolute -left-4 -top-4 -z-10 h-[88%] w-[88%] bg-[#DCDDF5]"></div>
-            <div className="relative z-10 aspect-[4/5] w-[62%] bg-gray-200"></div>
+            <div className="absolute -right-6 -top-6 -z-10 h-full w-full bg-[#DCDDF5]"></div>
+            <Image
+              src="/Scenery2.jpg"
+              alt="Understanding Our Journey"
+              width={800}
+              height={450}
+              className="relative z-10 aspect-video w-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -311,7 +320,15 @@ export default function Home() {
                     className="absolute -left-4 -top-4 h-[85%] w-[85%]"
                     style={{ background: service.blockColor, zIndex: 0 }}
                   ></div>
-                  <div data-reveal className="relative aspect-[6/5] w-[70%] bg-gray-200" style={{ zIndex: 1 }}></div>
+                  <Image
+                    data-reveal
+                    src={service.image}
+                    alt={service.kicker}
+                    width={600}
+                    height={500}
+                    className="relative aspect-[6/5] w-[70%] object-cover"
+                    style={{ zIndex: 1 }}
+                  />
                 </div>
                 <div data-reveal style={{ direction: 'ltr' }}>
                   <span className="mb-2 block text-sm italic text-[#C2445B]" style={{ fontWeight: 700 }}>

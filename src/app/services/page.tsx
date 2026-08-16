@@ -25,6 +25,7 @@ const services = [
       "Queer affirming care",
     ],
     bg: "#FBF3EF",
+    image: "/Individual_Therapy.jpeg",
   },
   {
     kicker: "COUPLES THERAPY",
@@ -41,6 +42,7 @@ const services = [
       "Repair from affair and betrayal",
     ],
     bg: "#FDEEEF",
+    image: "/Couples_Therapy.jpeg",
   },
   {
     kicker: "SUPERVISION",
@@ -52,6 +54,7 @@ const services = [
     areasLabel: "",
     areas: null,
     bg: "#DEE1F4",
+    image: "/Supervision2.jpeg",
   },
 ];
 
@@ -148,6 +151,20 @@ export default function ServicesPage() {
             <p style={{ fontSize: '14px', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#C2445B', fontWeight: 700, margin: '0 0 28px' }}>
               — {service.author}
             </p>
+
+            {service.image && (
+              <div className="relative" style={{ marginBottom: '28px' }}>
+                <div className="absolute -right-6 -top-6 -z-10 h-full w-full" style={{ background: index === 0 ? '#EDE6D8' : index === 1 ? '#F4D5D9' : '#C8CBEB' }}></div>
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={800}
+                  height={450}
+                  className="relative z-10 aspect-video w-full object-cover"
+                />
+              </div>
+            )}
+
             <p style={{ fontSize: '19px', lineHeight: 1.7, margin: 0, color: '#4A3F36' }}>
               {service.body1}
             </p>
