@@ -363,7 +363,7 @@ export default function Home() {
             className="mb-6 text-3xl lg:text-4xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
-            You might be <span className="text-[#FFE66D]">wondering</span>…
+            You might be <span className="text-[#FF6F81]">wondering</span>…
           </h2>
 
           <div className="flex flex-col gap-3">
