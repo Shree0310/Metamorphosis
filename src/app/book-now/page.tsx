@@ -9,6 +9,7 @@ type FormState = {
   name: string;
   email: string;
   phone: string;
+  service: string;
   message: string;
 };
 
@@ -16,13 +17,13 @@ const initialFormState: FormState = {
   name: '',
   email: '',
   phone: '',
+  service: '',
   message: '',
 };
 
 export default function BookNowPage() {
   const [formData, setFormData] = useState<FormState>(initialFormState);
   const [submitted, setSubmitted] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<'cashfree' | 'upi'>('cashfree');
 
   useEffect(() => {
     (async function () {
@@ -52,6 +53,24 @@ export default function BookNowPage() {
   };
 
   return (
+    <>
+      <style dangerouslySetInnerHTML={{__html: `
+        select option {
+          background-color: #FBF3EF !important;
+          color: #2B2420 !important;
+        }
+        select option:checked,
+        select option:focus,
+        select option:hover,
+        select option[selected] {
+          background-color: #FDEEEF !important;
+          background: #FDEEEF !important;
+          color: #2B2420 !important;
+        }
+        select:focus option:checked {
+          background: linear-gradient(#FDEEEF, #FDEEEF) !important;
+        }
+      `}} />
     <main className="min-h-screen text-[#2B2420]" style={{ fontFamily: 'var(--font-kalam)', background: '#FDEEEF' }}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-[#EDE6D8] bg-[#FBF3EF]" style={{ padding: '22px clamp(20px, 5vw, 72px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap' }}>
@@ -139,9 +158,9 @@ export default function BookNowPage() {
         <div style={{ maxWidth: '1200px', margin: '60px auto 0' }}>
           {!submitted ? (
             <div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '40px', alignItems: 'start' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'start' }}>
                 {/* Form */}
-                <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: '40px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+                <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
                   <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 24px', color: '#2B2420' }}>
                     Add your details
                   </h4>
@@ -168,57 +187,90 @@ export default function BookNowPage() {
                     />
                   </label>
 
-                  {/* Email & Phone */}
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px' }}>
-                    <label style={{ display: 'flex', flexDirection: 'column' }}>
-                      <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                        Email address <span style={{ color: '#C2445B' }}>*</span>
-                      </span>
-                      <input
-                        required
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        style={{
-                          background: '#FBF3EF',
-                          border: '1px solid #E0D5C7',
-                          padding: '12px 15px',
-                          fontFamily: 'var(--font-kalam)',
-                          fontSize: '16px',
-                          color: '#2B2420',
-                          borderRadius: 0,
-                        }}
-                      />
-                    </label>
+                  {/* Email */}
+                  <label style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
+                      Email address <span style={{ color: '#C2445B' }}>*</span>
+                    </span>
+                    <input
+                      required
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      style={{
+                        background: '#FBF3EF',
+                        border: '1px solid #E0D5C7',
+                        padding: '12px 15px',
+                        fontFamily: 'var(--font-kalam)',
+                        fontSize: '16px',
+                        color: '#2B2420',
+                        borderRadius: 0,
+                      }}
+                    />
+                  </label>
 
-                    <label style={{ display: 'flex', flexDirection: 'column' }}>
-                      <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                        Contact Number <span style={{ color: '#C2445B' }}>*</span>
-                      </span>
-                      <input
-                        required
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        style={{
-                          background: '#FBF3EF',
-                          border: '1px solid #E0D5C7',
-                          padding: '12px 15px',
-                          fontFamily: 'var(--font-kalam)',
-                          fontSize: '16px',
-                          color: '#2B2420',
-                          borderRadius: 0,
-                        }}
-                      />
-                    </label>
-                  </div>
+                  {/* Contact Number */}
+                  <label style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
+                      Contact number <span style={{ color: '#C2445B' }}>*</span>
+                    </span>
+                    <input
+                      required
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      style={{
+                        background: '#FBF3EF',
+                        border: '1px solid #E0D5C7',
+                        padding: '12px 15px',
+                        fontFamily: 'var(--font-kalam)',
+                        fontSize: '16px',
+                        color: '#2B2420',
+                        borderRadius: 0,
+                      }}
+                    />
+                  </label>
+
+                  {/* Service Needed */}
+                  <label style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
+                      Service needed <span style={{ color: '#C2445B' }}>*</span>
+                    </span>
+                    <select
+                      required
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      style={{
+                        background: '#FBF3EF',
+                        border: '1px solid #E0D5C7',
+                        padding: '12px 15px',
+                        fontFamily: 'var(--font-kalam)',
+                        fontSize: '16px',
+                        color: formData.service === '' ? '#8A7B6C' : '#2B2420',
+                        borderRadius: 0,
+                        cursor: 'pointer',
+                        appearance: 'none',
+                        backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C2445B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundPosition: 'right 12px center',
+                        backgroundSize: '20px',
+                        paddingRight: '40px',
+                      }}
+                    >
+                      <option value="" style={{ color: '#8A7B6C' }}>Select a service</option>
+                      <option value="Individual Therapy" style={{ color: '#2B2420' }}>Individual Therapy</option>
+                      <option value="Couples Therapy" style={{ color: '#2B2420' }}>Couples Therapy</option>
+                      <option value="Supervision" style={{ color: '#2B2420' }}>Supervision</option>
+                    </select>
+                  </label>
 
                   {/* Message */}
                   <label style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      Any other information you want to share?
+                      What would you like to talk about?
                     </span>
                     <textarea
                       name="message"
@@ -262,7 +314,7 @@ export default function BookNowPage() {
                 </div>
 
                 {/* What to Expect Sidebar */}
-                <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: '32px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+                <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
                   <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
                     What to expect
                   </h4>
@@ -284,7 +336,7 @@ export default function BookNowPage() {
               </div>
 
               {/* Payment Options - Full Width Below Form */}
-              <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: '40px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '40px', maxWidth: 'calc(100% - 350px - 40px)' }}>
+              <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '40px' }}>
                 <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
                   Payment Options
                 </h4>
@@ -292,72 +344,19 @@ export default function BookNowPage() {
                   Complete payment to book your session
                 </p>
 
-                {/* Payment Method Toggle */}
-                <div style={{ display: 'flex', background: '#FDEEEF', padding: '6px', borderRadius: '12px', marginBottom: '28px' }}>
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod('cashfree')}
-                    style={{
-                      flex: 1,
-                      padding: '12px 28px',
-                      fontFamily: 'var(--font-baloo)',
-                      fontWeight: 600,
-                      fontSize: '15px',
-                      border: 'none',
-                      background: paymentMethod === 'cashfree' ? '#FFFFFF' : 'transparent',
-                      color: paymentMethod === 'cashfree' ? '#2B2420' : '#8A7B6C',
-                      borderRadius: '10px',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s ease',
-                      boxShadow: paymentMethod === 'cashfree' ? '0 2px 12px rgba(0, 0, 0, 0.12)' : 'none',
-                    }}
-                  >
-                    Cashfree Payments
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod('upi')}
-                    style={{
-                      flex: 1,
-                      padding: '12px 28px',
-                      fontFamily: 'var(--font-baloo)',
-                      fontWeight: 600,
-                      fontSize: '15px',
-                      border: 'none',
-                      background: paymentMethod === 'upi' ? '#FFFFFF' : 'transparent',
-                      color: paymentMethod === 'upi' ? '#2B2420' : '#8A7B6C',
-                      borderRadius: '10px',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s ease',
-                      boxShadow: paymentMethod === 'upi' ? '0 2px 12px rgba(0, 0, 0, 0.12)' : 'none',
-                    }}
-                  >
-                    Direct UPI
-                  </button>
-                </div>
-
-                {/* Payment Content */}
-                {paymentMethod === 'cashfree' ? (
-                  <div style={{ textAlign: 'center', padding: '32px', background: '#FBF3EF', borderRadius: '8px' }}>
-                    <p style={{ fontSize: '16px', color: '#4A3F36', margin: 0 }}>
-                      Cashfree payment integration coming soon
-                    </p>
-                  </div>
-                ) : (
-                  <div style={{ textAlign: 'center' }}>
-                    <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
-                      Pay via UPI
-                    </h5>
-                    <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
-                      Transfer ₹2000 to the UPI ID or scan the QR below.
-                    </p>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <div style={{ width: '200px', height: '200px', background: '#F0EBE3', border: '2px dashed #E0D5C7', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', color: '#8A7B6C', textAlign: 'center', padding: '20px' }}>
-                        UPI QR Code<br />Placeholder
-                      </div>
+                <div style={{ textAlign: 'center' }}>
+                  <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
+                    Pay via UPI
+                  </h5>
+                  <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
+                    Transfer ₹2000 to the UPI ID or scan the QR below.
+                  </p>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div style={{ width: '200px', height: '200px', background: '#F0EBE3', border: '2px dashed #E0D5C7', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', color: '#8A7B6C', textAlign: 'center', padding: '20px' }}>
+                      UPI QR Code<br />Placeholder
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           ) : (
@@ -400,5 +399,6 @@ export default function BookNowPage() {
         <p style={{ fontSize: '12.5px', margin: '16px 0 0', color: '#8A7B6C' }}>© 2026 Metamorphosis Therapy Initiative</p>
       </footer>
     </main>
+    </>
   );
 }

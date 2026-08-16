@@ -89,7 +89,7 @@ export default function AboutPageContent() {
 
       <section className="bg-[#FDEEEF] px-5 py-24 text-center sm:px-8 lg:px-16">
         <p
-          className="m-0 mx-auto whitespace-nowrap text-4xl italic leading-tight text-[#2B2420] lg:text-5xl"
+          className="m-0 mx-auto text-3xl italic leading-tight text-[#2B2420] sm:text-4xl lg:text-5xl"
           style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600 }}
         >
           "It's the relationship that heals."
@@ -120,15 +120,15 @@ export default function AboutPageContent() {
               About
             </span>
             <h1
-              className="m-0 text-5xl leading-tight lg:text-6xl"
+              className="m-0 text-3xl leading-tight sm:text-4xl lg:text-6xl"
               style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
             >
               Hey! I'm <span className="text-[#FF6F81]">Kuntal Vora</span>.
             </h1>
-            <p className="mt-6 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+            <p className="mt-6 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
               I go by the pronouns she/her. I'm a Counseling Psychologist and Clinical Supervisor working with individuals and couples — heterosexual and queer — between the ages of 18 and 50. I also provide supervision to early-career and mid-career therapists, one-on-one and in groups.
             </p>
-            <p className="mt-5 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+            <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
               Off the clock: cooking, journaling and photographing memories, true-crime shows, music, time with family and friends, traveling, yapping with people I'm comfortable with, petting every street cat I meet, and taking naps very, very seriously.
             </p>
           </div>
@@ -239,15 +239,15 @@ export default function AboutPageContent() {
             My journey with psychology
           </span>
           <h2
-            className="mb-6 text-4xl leading-tight lg:text-5xl"
+            className="mb-6 text-2xl leading-tight sm:text-3xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
             One offhand comment in a math class changed <span className="text-[#4ECDC4]">everything</span>.
           </h2>
-          <p className="m-0 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="m-0 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             My journey with psychology began when my math teacher — my least favorite subject — mentioned that a family member of hers was a psychologist. That was an aha moment. I looked into the field and decided: this is who I'm going to be.
           </p>
-          <p className="mt-5 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             I love being a therapist and find the work deeply fulfilling. It's a privilege to witness the shifts that happen in someone's life, and an honor to be a fellow traveler in the journeys my clients and supervisees take. Just like metamorphosis.
           </p>
         </div>
@@ -259,15 +259,15 @@ export default function AboutPageContent() {
             About my practice
           </span>
           <h2
-            className="mb-6 text-4xl leading-tight lg:text-5xl"
+            className="mb-6 text-2xl leading-tight sm:text-3xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
             <span className="text-[#C7CEEA]">Metamorphosis</span> Therapy Initiative
           </h2>
-          <p className="m-0 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="m-0 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             I run a fully virtual practice where I see Indian individuals and couples all around the world, alongside supervision for early-career and mid-career therapists, individually and in groups. I keep up my own personal therapy and regular supervision — to take care of myself, personally and professionally.
           </p>
-          <p className="mt-5 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             I started Metamorphosis with the intention of representing the changes that happen when we start taking care of ourselves — not just the big, momentous ones, but the small, tentative ones too. It's not just about the butterflies. It's about the cocoon as well.
           </p>
         </div>
@@ -325,18 +325,18 @@ export default function AboutPageContent() {
             My style
           </span>
           <h2
-            className="mb-6 text-4xl leading-tight lg:text-5xl"
+            className="mb-6 text-2xl leading-tight sm:text-3xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
             Client-centred, <span className="text-[#FFE66D]">body-aware</span>, non-pathologizing.
           </h2>
-          <p className="m-0 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="m-0 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             I'm a narrative practitioner working through a client-centred lens, drawing from a body-based approach — I believe our bodies feel and store a lot of our experiences. My style is collaborative and relational: I strive to cultivate a safe, non-judgmental space, and I strongly believe in the autonomy people hold.
           </p>
-          <p className="mt-5 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             My approach is non-blaming and non-pathologizing — I don't believe in "fixing" people, because that would mean something is inherently broken. I see humans as humans, not clusters of symptoms. In our sessions, we may talk, draw, move, or sit in silence to reflect on what's been going on.
           </p>
-          <p className="mt-5 text-xl leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
+          <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
             Trauma-informed, queer-affirmative, neuro-affirming, culturally sensitive, social-justice-lensed, and feminist — these are the core pillars of my practice.
           </p>
         </div>
@@ -348,7 +348,7 @@ export default function AboutPageContent() {
             How I work
           </span>
           <h2
-            className="mb-11 text-4xl leading-tight lg:text-5xl"
+            className="mb-11 text-2xl leading-tight sm:text-3xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
           >
             My <span className="text-[#FF8B94]">therapeutic</span> approaches

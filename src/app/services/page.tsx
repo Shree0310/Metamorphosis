@@ -162,7 +162,7 @@ export default function ServicesPage() {
                 <h3 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '36px 0 20px' }}>
                   {service.areasLabel}
                 </h3>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px 24px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px 24px' }}>
                   {service.areas.map((area, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                       <span style={{ width: '6px', height: '6px', flex: '0 0 auto', background: '#C2445B', marginTop: '7px' }}></span>

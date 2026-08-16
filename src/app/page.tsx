@@ -119,23 +119,16 @@ export default function Home() {
       <section className="mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 lg:px-16 lg:py-24">
         <div>
           <h1
-            className="m-0 text-5xl leading-tight tracking-tight lg:text-6xl"
-            style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, letterSpacing: '-0.01em', whiteSpace: 'nowrap' }}
+            className="m-0 text-4xl leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+            style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, letterSpacing: '-0.01em' }}
           >
             Welcome to <span className="text-[#FF6F81]">change.</span>
           </h1>
           <p
-            className="mx-auto mt-7 max-w-prose text-xl leading-relaxed italic text-[#4A3F36]"
+            className="mx-auto mt-7 max-w-prose text-lg leading-relaxed italic text-[#4A3F36] sm:text-xl"
             style={{ fontFamily: 'var(--font-kalam)', fontWeight: 700 }}
           >
-            "Words are, in my not-so-humble opinion,
-            <br />
-            our most inexhaustible source of magic —
-            <br />
-            capable of both inflicting injury, and
-            <br />
-            remedying it."
-            <br />
+            "Words are, in my not-so-humble opinion, our most inexhaustible source of magic — capable of both inflicting injury, and remedying it."
             <span className="mt-3 block text-xs uppercase tracking-widest text-[#C2445B] not-italic" style={{ fontWeight: 700 }}>
               — Albus Dumbledore, Harry Potter
             </span>
