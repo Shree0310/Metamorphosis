@@ -362,9 +362,6 @@ export default function FAQPage() {
               — Carl Jung
             </span>
           </p>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#4A3F36]" style={{ fontWeight: 500 }}>
-            I have compiled frequently asked questions when looking for a therapist. If there are any other questions, please email me and I would be happy to help.
-          </p>
 
           {/* Search Bar - Moved inside hero section */}
           <div className="mx-auto mt-8 max-w-xl">

@@ -77,14 +77,14 @@ export default function ServicesPage() {
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.15 });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
       els.forEach((el) => io.observe(el));
     } else {
       els.forEach((el) => reveal(el as HTMLElement));
     }
 
-    const timeout = setTimeout(() => els.forEach((el) => reveal(el as HTMLElement)), 2500);
+    const timeout = setTimeout(() => els.forEach((el) => reveal(el as HTMLElement)), 3500);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -257,8 +257,8 @@ export default function ServicesPage() {
             data-reveal="1"
             style={{
               opacity: 0,
-              transform: 'translateY(26px)',
-              transition: 'opacity .8s ease-out, transform .8s ease-out',
+              transform: 'translateY(50px)',
+              transition: 'opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
               padding: '80px clamp(20px, 5vw, 72px)',
               maxWidth: '960px',
               margin: '0 auto'
