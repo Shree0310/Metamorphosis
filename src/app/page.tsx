@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -46,6 +46,7 @@ const values = [
 ];
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
@@ -70,7 +71,7 @@ export default function Home() {
     <main className="bg-[#FBF3EF] text-[#2B2420]" style={{ fontFamily: 'var(--font-kalam)' }}>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-[#EDE6D8] bg-[#FDFBF7] px-5 py-5 sm:px-8 lg:px-16">
-        <div className="flex flex-wrap items-center justify-between gap-5">
+        <div className="flex items-center justify-between gap-5">
           <Link href="/" className="flex items-center gap-4 hover:no-underline">
             <Image
               src="/logopng.png"
@@ -83,7 +84,9 @@ export default function Home() {
               Metamorphosis Therapy Initiative
             </span>
           </Link>
-          <div className="flex flex-wrap items-center gap-7">
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-7">
             <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               About
             </Link>
@@ -101,7 +104,58 @@ export default function Home() {
               Book a Session
             </Link>
           </div>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden flex flex-col gap-1.5 p-2"
+            aria-label="Toggle menu"
+          >
+            <span className={`block h-0.5 w-6 bg-[#2B2420] transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-[#2B2420] transition-all ${menuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-[#2B2420] transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {menuOpen && (
+          <div className="md:hidden fixed inset-0 top-[73px] bg-[#FDFBF7] z-40">
+            <div className="flex flex-col gap-6 p-8">
+              <Link
+                href="/about"
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                About
+              </Link>
+              <Link
+                href="/services"
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                Services
+              </Link>
+              <Link
+                href="/faq"
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/book-now"
+                onClick={() => setMenuOpen(false)}
+                className="inline-block cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 text-center hover:bg-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '16px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
+              >
+                Book a Session
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}

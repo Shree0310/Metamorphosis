@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const services = [
   {
@@ -59,6 +59,8 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const reveal = (el: HTMLElement) => {
       el.style.opacity = "1";
@@ -88,31 +90,93 @@ export default function ServicesPage() {
 
   return (
     <main className="min-h-screen bg-[#FBF3EF] text-[#2B2420]" style={{ fontFamily: 'var(--font-kalam)' }}>
-      <nav className="sticky top-0 z-50 border-b border-[#EDE6D8] bg-[#FBF3EF]" style={{ padding: '22px clamp(20px, 5vw, 72px)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px', flexWrap: 'wrap' }}>
-        <Link href="/" className="flex items-center no-underline" style={{ gap: '16px', color: '#2B2420' }}>
-          <Image src="/logopng.png" alt="Metamorphosis Therapy logo" width={32} height={32} style={{ height: '32px', width: 'auto', display: 'block' }} />
-          <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '19px', letterSpacing: '-0.01em' }}>
-            Metamorphosis Therapy Initiative
-          </span>
-        </Link>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '28px', flexWrap: 'wrap' }}>
-          <Link href="/about" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
-            About
+      <nav className="sticky top-0 z-50 border-b border-[#EDE6D8] bg-[#FBF3EF] px-5 py-5 sm:px-8 lg:px-16">
+        <div className="flex items-center justify-between gap-5">
+          <Link href="/" className="flex items-center gap-4 hover:no-underline">
+            <Image
+              src="/logopng.png"
+              alt="Metamorphosis Therapy logo"
+              width={32}
+              height={32}
+              className="block h-8 w-auto"
+            />
+            <span
+              className="text-lg tracking-tight text-[#2B2420]"
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, letterSpacing: '-0.01em' }}
+            >
+              Metamorphosis Therapy Initiative
+            </span>
           </Link>
-          <span style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
-            Services
-          </span>
-          <Link href="/faq" className="no-underline" style={{ fontSize: '16px', fontWeight: 500, color: '#2B2420', textDecoration: 'none' }}>
-            FAQ
-          </Link>
-          <Link
-            href="/book-now"
-            className="inline-block no-underline"
-            style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', textDecoration: 'none' }}
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-7">
+            <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+              About
+            </Link>
+            <span className="text-base text-[#2B2420]" style={{ fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
+              Services
+            </span>
+            <Link href="/faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+              FAQ
+            </Link>
+            <Link
+              href="/book-now"
+              className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
+            >
+              Book a Session
+            </Link>
+          </div>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden flex flex-col gap-1.5 p-2"
+            aria-label="Toggle menu"
           >
-            Book a Session
-          </Link>
+            <span className={`block h-0.5 w-6 bg-[#2B2420] transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-[#2B2420] transition-all ${menuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block h-0.5 w-6 bg-[#2B2420] transition-all ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {menuOpen && (
+          <div className="md:hidden fixed inset-0 top-[73px] bg-[#FBF3EF] z-40">
+            <div className="flex flex-col gap-6 p-8">
+              <Link
+                href="/about"
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                About
+              </Link>
+              <span
+                className="text-xl text-[#2B2420]"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}
+              >
+                Services
+              </span>
+              <Link
+                href="/faq"
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/book-now"
+                onClick={() => setMenuOpen(false)}
+                className="inline-block cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 text-center hover:bg-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '16px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
+              >
+                Book a Session
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
