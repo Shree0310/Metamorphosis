@@ -405,25 +405,79 @@ export default function BookNowPage() {
                 </form>
                 </div>
 
-                {/* What to Expect Sidebar */}
-                <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
-                  <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
-                    What to expect
-                  </h4>
-                  <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                    <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                      <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                      <span>We'll confirm fit and availability for a consultation call.</span>
-                    </li>
-                    <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                      <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                      <span>If it feels aligned, we'll move forward with a first session.</span>
-                    </li>
-                    <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                      <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                      <span>If now isn't the right time, I'll make sure you leave with thoughtful next steps.</span>
-                    </li>
-                  </ul>
+                {/* Sidebar with What to Expect and Availability & Fees */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                  {/* What to Expect */}
+                  <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+                    <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
+                      What to expect
+                    </h4>
+                    <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                      <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
+                        <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
+                        <span>We'll confirm fit and availability for a consultation call.</span>
+                      </li>
+                      <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
+                        <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
+                        <span>If it feels aligned, we'll move forward with a first session.</span>
+                      </li>
+                      <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
+                        <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
+                        <span>If now isn't the right time, I'll make sure you leave with thoughtful next steps.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Availability and Fees */}
+                  <div style={{ background: '#FBF3EF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+                    <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 24px', color: '#2B2420' }}>
+                      Availability and Fees
+                    </h4>
+
+                    {/* Consultation hours */}
+                    <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
+                      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                        <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                          Consultation hours
+                        </span>
+                        <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                          <p style={{ margin: '0 0 4px' }}>Tuesdays to Fridays - 11 am to 7 pm</p>
+                          <p style={{ margin: 0 }}>Saturdays - 11 am to 5 pm</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Session duration */}
+                    <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
+                      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                        <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                          Session duration
+                        </span>
+                        <span style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                          60 minutes
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Fee per session */}
+                    <div>
+                      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                        <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                          Fee per session
+                        </span>
+                        <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                          <p style={{ fontWeight: 600, margin: '0 0 6px', color: '#2B2420' }}>Clients living in India</p>
+                          <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹2500</p>
+                          <p style={{ margin: '0 0 12px' }}>Couples Therapy - ₹4000</p>
+
+                          <p style={{ fontWeight: 600, margin: '0 0 6px', color: '#2B2420' }}>Clients living/studying abroad</p>
+                          <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹3500</p>
+                          <p style={{ margin: '0 0 3px' }}>Couples Therapy - ₹5000</p>
+                          <p style={{ margin: 0 }}>Supervision - ₹1200 to ₹2200</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
