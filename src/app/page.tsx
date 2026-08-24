@@ -547,8 +547,8 @@ export default function Home() {
                     alt={service.kicker}
                     width={600}
                     height={500}
-                    className="relative aspect-[6/5] w-[70%] object-cover"
-                    style={{ zIndex: 1 }}
+                    className="relative w-[85%] object-contain"
+                    style={{ zIndex: 1, maxHeight: '450px' }}
                   />
                 </div>
                 <div data-reveal style={{ direction: 'ltr' }}>

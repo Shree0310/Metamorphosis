@@ -278,14 +278,21 @@ export default function ServicesPage() {
             </p>
 
             {service.image && (
-              <div className="relative" style={{ marginBottom: '28px' }}>
-                <div className="absolute -right-6 -top-6 -z-10 h-full w-full" style={{ background: index === 0 ? '#EDE6D8' : index === 1 ? '#F4D5D9' : '#C8CBEB' }}></div>
+              <div className="relative" style={{ marginBottom: '28px', isolation: 'isolate' }}>
+                {/* Background panel */}
+                <div className="absolute -left-[60px] -right-[60px] -top-4 -bottom-4 hidden lg:block" style={{
+                  background: index === 0 ? '#C9EDE8' : index === 1 ? '#FBE0C4' : '#E4E1F5',
+                  borderRadius: '8px',
+                  zIndex: -2
+                }}></div>
+
                 <Image
                   src={service.image}
                   alt={service.title}
                   width={800}
-                  height={450}
-                  className="relative z-10 aspect-video w-full object-cover"
+                  height={600}
+                  className="relative w-full object-contain"
+                  style={{ maxHeight: '500px', zIndex: 1 }}
                 />
               </div>
             )}

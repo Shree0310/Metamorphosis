@@ -169,9 +169,122 @@ export default function BookNowPage() {
       </nav>
 
       {/* Main Content */}
-      <section style={{ padding: '60px clamp(20px, 5vw, 72px) 80px', maxWidth: '1400px', margin: '0 auto' }}>
+      <section style={{ padding: '60px clamp(20px, 5vw, 72px) 80px', maxWidth: '1400px', margin: '0 auto', position: 'relative', overflow: 'hidden' }}>
+        {/* Decorative Elements */}
+        <svg
+          className="absolute left-[5%] top-[10%] h-12 w-12 opacity-25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#C2445B"
+          strokeWidth="1.5"
+          style={{ transform: 'rotate(15deg)' }}
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
+        </svg>
+
+        <svg
+          className="absolute right-[8%] top-[15%] h-10 w-10 opacity-20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FF6F81"
+          strokeWidth="2"
+        >
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+        </svg>
+
+        <svg
+          className="absolute left-[85%] top-[35%] h-8 w-8 opacity-30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#C7CEEA"
+          strokeWidth="1.5"
+          style={{ transform: 'rotate(-20deg)' }}
+        >
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <line x1="9" y1="9" x2="15" y2="15" />
+          <line x1="15" y1="9" x2="9" y2="15" />
+        </svg>
+
+        <svg
+          className="absolute left-[3%] top-[65%] h-11 w-11 opacity-25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FBE0C4"
+          strokeWidth="1.5"
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+
+        <svg
+          className="absolute right-[6%] top-[55%] h-9 w-9 opacity-20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#C9EDE8"
+          strokeWidth="2"
+          style={{ transform: 'rotate(25deg)' }}
+        >
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+
+        <svg
+          className="absolute left-[90%] top-[80%] h-10 w-10 opacity-25"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FF8B94"
+          strokeWidth="1.5"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+
         {/* Header */}
-        <div style={{ marginBottom: '32px', textAlign: 'center' }}>
+        <div style={{ marginBottom: '32px', textAlign: 'center', position: 'relative' }}>
+          {/* Decorative elements around heading */}
+          <svg
+            className="absolute left-[15%] top-[-10px] h-8 w-8 opacity-30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#FF6F81"
+            strokeWidth="2"
+            style={{ transform: 'rotate(-15deg)' }}
+          >
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+
+          <svg
+            className="absolute right-[15%] top-[-5px] h-7 w-7 opacity-25"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#C2445B"
+            strokeWidth="1.5"
+            style={{ transform: 'rotate(20deg)' }}
+          >
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+
+          <svg
+            className="absolute left-[20%] bottom-[10px] h-6 w-6 opacity-20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#C9EDE8"
+            strokeWidth="2"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+
+          <svg
+            className="absolute right-[18%] bottom-[15px] h-7 w-7 opacity-25"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#C7CEEA"
+            strokeWidth="1.5"
+            style={{ transform: 'rotate(-25deg)' }}
+          >
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+
           <h1 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(32px, 4vw, 48px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420', margin: '0 0 12px' }}>
             Book a Session
           </h1>
@@ -466,11 +579,11 @@ export default function BookNowPage() {
                           Fee per session
                         </span>
                         <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
-                          <p style={{ fontWeight: 600, margin: '0 0 6px', color: '#2B2420' }}>Clients living in India</p>
+                          <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living in India</p>
                           <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹2500</p>
-                          <p style={{ margin: '0 0 12px' }}>Couples Therapy - ₹4000</p>
+                          <p style={{ margin: '0 0 20px' }}>Couples Therapy - ₹4000</p>
 
-                          <p style={{ fontWeight: 600, margin: '0 0 6px', color: '#2B2420' }}>Clients living/studying abroad</p>
+                          <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living/studying abroad</p>
                           <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹3500</p>
                           <p style={{ margin: '0 0 3px' }}>Couples Therapy - ₹5000</p>
                           <p style={{ margin: 0 }}>Supervision - ₹1200 to ₹2200</p>
@@ -496,7 +609,7 @@ export default function BookNowPage() {
                 <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
                   Payment Options
                 </h4>
-                <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
+                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
                   Complete payment to book your session
                 </p>
 
@@ -504,7 +617,7 @@ export default function BookNowPage() {
                   <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
                     Pay via UPI
                   </h5>
-                  <p style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
+                  <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
                     Transfer ₹2000 to the UPI ID or scan the QR below.
                   </p>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -534,10 +647,10 @@ export default function BookNowPage() {
         {/* Quick FAQs Section */}
         <div style={{ maxWidth: '1100px', margin: '80px auto 0' }}>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <span className="block text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 12px', color: '#C2445B' }}>
+            <span className="block text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 12px', color: '#C2445B', fontSize: '15px' }}>
               QUESTIONS YOU MIGHT HAVE
             </span>
-            <p style={{ fontSize: '17px', lineHeight: 1.6, color: '#4A3F36', maxWidth: '60ch', margin: '0 auto' }}>
+            <p style={{ fontSize: '18px', lineHeight: 1.6, color: '#4A3F36', maxWidth: '60ch', margin: '0 auto' }}>
               Here are answers to some common questions before you book
             </p>
           </div>
