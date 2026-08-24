@@ -23,15 +23,45 @@ const initialFormState: FormState = {
   message: '',
 };
 
+type SessionType = 'individual' | 'couple' | 'supervision';
+
+interface SessionConfig {
+  namespace: string;
+  calLink: string;
+  label: string;
+}
+
+const sessionConfigs: Record<SessionType, SessionConfig> = {
+  individual: {
+    namespace: 'individual-session',
+    calLink: 'sourashree-banerjee-vnxoqo/individual-session',
+    label: 'Individual Session'
+  },
+  couple: {
+    namespace: 'couple-session',
+    calLink: 'sourashree-banerjee-vnxoqo/couple-session',
+    label: 'Couple Session'
+  },
+  supervision: {
+    namespace: 'supervision',
+    calLink: 'sourashree-banerjee-vnxoqo/supervision',
+    label: 'Supervision'
+  }
+};
+
 export default function BookNowPage() {
   const [formData, setFormData] = useState<FormState>(initialFormState);
   const [submitted, setSubmitted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaqIds, setOpenFaqIds] = useState<string[]>([]);
+  const [selectedSession, setSelectedSession] = useState<SessionType>('individual');
+  const [isCalLoading, setIsCalLoading] = useState(false);
 
   useEffect(() => {
+    setIsCalLoading(true);
     (async function () {
-      const cal = await getCalApi({ namespace: "30-min-session" });
+      const config = sessionConfigs[selectedSession];
+      const cal = await getCalApi({ namespace: config.namespace });
       cal("ui", {
         theme: "light",
         cssVarsPerTheme: {
@@ -41,8 +71,10 @@ export default function BookNowPage() {
         hideEventTypeDetails: false,
         layout: "month_view"
       });
+      // Small delay to ensure smooth transition
+      setTimeout(() => setIsCalLoading(false), 300);
     })();
-  }, []);
+  }, [selectedSession]);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -314,7 +346,7 @@ export default function BookNowPage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ background: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', overflow: 'hidden', padding: '32px 24px 24px' }}>
             {/* Calendar Heading */}
-            <div style={{ textAlign: 'left', marginBottom: '8px' }}>
+            <div style={{ textAlign: 'left', marginBottom: '20px' }}>
               <h2 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 32px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420', margin: '0 0 6px' }}>
                 Book Your Time Slot
               </h2>
@@ -323,12 +355,76 @@ export default function BookNowPage() {
               </p>
             </div>
 
-            <Cal
-              namespace="30-min-session"
-              calLink="sourashree-banerjee-vnxoqo/30-min-session"
-              style={{ width: "100%", height: "100%", minHeight: "650px" }}
-              config={{ layout: "month_view", theme: "light", useSlotsViewOnSmallScreen: "true" }}
-            />
+            {/* Session Type Tabs */}
+            <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', borderBottom: '2px solid #F0EBE3', paddingBottom: '0', flexWrap: 'wrap' }}>
+              {(Object.keys(sessionConfigs) as SessionType[]).map((sessionType) => (
+                <button
+                  key={sessionType}
+                  onClick={() => setSelectedSession(sessionType)}
+                  style={{
+                    fontFamily: 'var(--font-baloo)',
+                    fontWeight: 600,
+                    fontSize: '15px',
+                    padding: '12px 20px',
+                    border: 'none',
+                    background: 'transparent',
+                    color: selectedSession === sessionType ? '#C2445B' : '#6B5D50',
+                    cursor: 'pointer',
+                    borderBottom: selectedSession === sessionType ? '3px solid #C2445B' : '3px solid transparent',
+                    marginBottom: '-2px',
+                    transition: 'all 0.2s ease',
+                    position: 'relative'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (selectedSession !== sessionType) {
+                      e.currentTarget.style.color = '#4A3F36';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (selectedSession !== sessionType) {
+                      e.currentTarget.style.color = '#6B5D50';
+                    }
+                  }}
+                >
+                  {sessionConfigs[sessionType].label}
+                </button>
+              ))}
+            </div>
+
+            {/* Calendar Embed with Loading State */}
+            <div style={{ position: 'relative', minHeight: '650px' }}>
+              {isCalLoading && (
+                <div style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  zIndex: 10,
+                  borderRadius: '8px'
+                }}>
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    border: '4px solid #F0EBE3',
+                    borderTop: '4px solid #C2445B',
+                    borderRadius: '50%',
+                    animation: 'spin 1s linear infinite'
+                  }}></div>
+                </div>
+              )}
+              <Cal
+                key={selectedSession}
+                namespace={sessionConfigs[selectedSession].namespace}
+                calLink={sessionConfigs[selectedSession].calLink}
+                style={{ width: "100%", height: "100%", minHeight: "650px", overflow: "scroll" }}
+                config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+              />
+            </div>
 
             {/* Fallback Link */}
             <div style={{ textAlign: 'center', marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #F0EBE3' }}>
@@ -336,7 +432,7 @@ export default function BookNowPage() {
                 Can't see the calendar?
               </p>
               <a
-                href="https://cal.com/sourashree-banerjee-vnxoqo/30-min-session"
+                href={`https://cal.com/${sessionConfigs[selectedSession].calLink}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ fontSize: '16px', fontWeight: 600, color: '#C2445B', textDecoration: 'underline', display: 'inline-flex', alignItems: 'center', gap: '6px' }}
@@ -351,6 +447,14 @@ export default function BookNowPage() {
             </div>
           </div>
         </div>
+
+        {/* Add CSS for spinner animation */}
+        <style jsx>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
 
         {/* Information Section */}
         <div style={{ maxWidth: '1200px', margin: '60px auto 0' }}>
