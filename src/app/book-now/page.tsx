@@ -103,13 +103,13 @@ export default function BookNowPage() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-7">
-            <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/about" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               About
             </Link>
-            <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/services" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
             </Link>
-            <Link href="/faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/faq" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               FAQ
             </Link>
             <span className="inline-block" style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px' }}>
@@ -135,6 +135,7 @@ export default function BookNowPage() {
             <div className="flex flex-col gap-6 p-8">
               <Link
                 href="/about"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -143,6 +144,7 @@ export default function BookNowPage() {
               </Link>
               <Link
                 href="/services"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -151,6 +153,7 @@ export default function BookNowPage() {
               </Link>
               <Link
                 href="/faq"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -850,6 +853,7 @@ export default function BookNowPage() {
           </p>
           <Link
             href="/faq"
+            scroll={false}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -898,7 +902,7 @@ export default function BookNowPage() {
           Online services are not suitable for crises or emergencies. Please visit your nearest mental health center or a helpline if you need immediate support.
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '16px' }}>
-          <Link href="/faq" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>FAQ</Link>
+          <Link href="/faq" scroll={false} style={{ fontSize: '12.5px', color: '#8A7B6C' }}>FAQ</Link>
           <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Privacy Policy</a>
           <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Terms of Service</a>
           <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Cancellation Policy</a>

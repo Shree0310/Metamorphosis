@@ -86,14 +86,15 @@ export default function AboutPageContent() {
             <span className="text-base text-[#2B2420]" style={{ fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
               About
             </span>
-            <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/services" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
             </Link>
-            <Link href="/faq" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/faq" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               FAQ
             </Link>
             <Link
               href="/book-now"
+              scroll={false}
               className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
               style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
             >
@@ -125,6 +126,7 @@ export default function AboutPageContent() {
               </span>
               <Link
                 href="/services"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -133,6 +135,7 @@ export default function AboutPageContent() {
               </Link>
               <Link
                 href="/faq"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -141,6 +144,7 @@ export default function AboutPageContent() {
               </Link>
               <Link
                 href="/book-now"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="inline-block cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 text-center hover:bg-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '16px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
@@ -550,7 +554,7 @@ export default function AboutPageContent() {
           Online services are not suitable for crises or emergencies. Please visit your nearest mental health center or a helpline if you need immediate support.
         </p>
         <div className="mt-4 flex flex-wrap gap-5">
-          <Link href="/faq" className="text-xs text-[#8A7B6C] hover:underline">
+          <Link href="/faq" scroll={false} className="text-xs text-[#8A7B6C] hover:underline">
             FAQ
           </Link>
           <a href="#" className="text-xs text-[#8A7B6C] hover:underline">

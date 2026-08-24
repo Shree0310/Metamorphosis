@@ -205,10 +205,10 @@ export default function FAQPage() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-7">
-            <Link href="/about" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/about" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               About
             </Link>
-            <Link href="/services" className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+            <Link href="/services" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               Services
             </Link>
             <span className="text-base text-[#2B2420]" style={{ fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
@@ -216,6 +216,7 @@ export default function FAQPage() {
             </span>
             <Link
               href="/book-now"
+              scroll={false}
               className="cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 hover:bg-[#C2445B] hover:no-underline"
               style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
             >
@@ -241,6 +242,7 @@ export default function FAQPage() {
             <div className="flex flex-col gap-6 p-8">
               <Link
                 href="/about"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -249,6 +251,7 @@ export default function FAQPage() {
               </Link>
               <Link
                 href="/services"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
@@ -263,6 +266,7 @@ export default function FAQPage() {
               </span>
               <Link
                 href="/book-now"
+                scroll={false}
                 onClick={() => setMenuOpen(false)}
                 className="inline-block cursor-pointer border-0 bg-[#FF6F81] px-6 py-3 text-center hover:bg-[#C2445B] hover:no-underline"
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '16px', borderRadius: 0, color: '#FFFFFF', textDecoration: 'none' }}
