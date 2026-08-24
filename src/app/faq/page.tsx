@@ -127,7 +127,7 @@ const faqs: FAQ[] = [
     id: "fees-pricing",
     category: "About Fees",
     question: "What are your fees?",
-    answer: "For Individual Sessions:\n• Clients residing in India - ₹2500\n• Indians residing outside of India - ₹3500\n\nFor Couples Therapy sessions:\n• Couples residing in India - ₹4000\n• Indian Couples outside of India - ₹5000\n\nFor supervision sessions - A range from ₹1200 to ₹2200."
+    answer: "For Individual Sessions:\n• Clients residing in India - ₹2500\n• Indians residing outside of India - ₹3500\n\nFor Couples Therapy sessions:\n• Couples residing in India - ₹4000\n• Indian Couples outside of India - ₹5000\n\nFor supervision sessions - A range from ₹1200 to ₹2200.\n\n*Note - The fees are subject to yearly change."
   },
   {
     id: "fees-sliding-scale",

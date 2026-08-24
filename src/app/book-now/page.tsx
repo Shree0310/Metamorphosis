@@ -10,6 +10,7 @@ type FormState = {
   email: string;
   phone: string;
   service: string;
+  referredBy: string;
   message: string;
 };
 
@@ -18,6 +19,7 @@ const initialFormState: FormState = {
   email: '',
   phone: '',
   service: '',
+  referredBy: '',
   message: '',
 };
 
@@ -475,12 +477,35 @@ export default function BookNowPage() {
                     </select>
                   </label>
 
+                  {/* Referred By */}
+                  <label style={{ display: 'flex', flexDirection: 'column' }}>
+                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
+                      Referred by <span style={{ color: '#C2445B' }}>*</span>
+                    </span>
+                    <input
+                      required
+                      name="referredBy"
+                      value={formData.referredBy}
+                      onChange={handleChange}
+                      style={{
+                        background: '#FBF3EF',
+                        border: '1px solid #E0D5C7',
+                        padding: '12px 15px',
+                        fontFamily: 'var(--font-kalam)',
+                        fontSize: '16px',
+                        color: '#2B2420',
+                        borderRadius: 0,
+                      }}
+                    />
+                  </label>
+
                   {/* Message */}
                   <label style={{ display: 'flex', flexDirection: 'column' }}>
                     <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      What would you like to talk about?
+                      What would you like to talk about? <span style={{ color: '#C2445B' }}>*</span>
                     </span>
                     <textarea
+                      required
                       name="message"
                       rows={4}
                       value={formData.message}
