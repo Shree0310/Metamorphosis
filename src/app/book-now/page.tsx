@@ -355,25 +355,32 @@ export default function BookNowPage() {
         {/* Information Section */}
         <div style={{ maxWidth: '1200px', margin: '60px auto 0' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-            {/* What to Expect */}
-            <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+            {/* Payment Options */}
+            <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
               <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
-                What to expect
+                Payment Options
               </h4>
-              <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                  <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                  <span>We'll confirm fit and availability for a consultation call.</span>
-                </li>
-                <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                  <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                  <span>If it feels aligned, we'll move forward with a first session.</span>
-                </li>
-                <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                  <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                  <span>If now isn't the right time, I'll make sure you leave with thoughtful next steps.</span>
-                </li>
-              </ul>
+              <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
+                Complete payment to book your session
+              </p>
+
+              <div style={{ textAlign: 'center' }}>
+                <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
+                  Pay via UPI
+                </h5>
+                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
+                  Transfer ₹2000 to the UPI ID or scan the QR below.
+                </p>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Image
+                    src="/QR_Code.jpeg"
+                    alt="UPI QR Code for payment"
+                    width={200}
+                    height={200}
+                    style={{ borderRadius: '8px', border: '2px solid #E0D5C7' }}
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Availability and Fees */}
@@ -401,14 +408,17 @@ export default function BookNowPage() {
                   <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
                     Session duration
                   </span>
-                  <span style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
-                    60 minutes
-                  </span>
+                  <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                    <p style={{ margin: '0 0 3px' }}>Individual sessions - 60 minutes</p>
+                    <p style={{ margin: '0 0 3px' }}>Couples therapy - 90 minutes</p>
+                    <p style={{ margin: '0 0 3px' }}>Supervision - 60 minutes</p>
+                    <p style={{ margin: 0 }}>Consultation call for all three - 15 minutes</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Fee per session */}
-              <div>
+              {/* Fee per session - Geographical pricing */}
+              <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
                 <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
                     Fee per session
@@ -420,40 +430,62 @@ export default function BookNowPage() {
 
                     <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living/studying abroad</p>
                     <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹3500</p>
-                    <p style={{ margin: '0 0 3px' }}>Couples Therapy - ₹5000</p>
-                    <p style={{ margin: 0 }}>Supervision - ₹1200 to ₹2200</p>
+                    <p style={{ margin: 0 }}>Couples Therapy - ₹5000</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Supervision pricing */}
+              <div>
+                <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                  <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                    Supervision
+                  </span>
+                  <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                    <p style={{ margin: 0 }}>₹1200 to ₹2200</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Payment Options - Full Width Below */}
-          <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '24px' }}>
-            <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
-              Payment Options
-            </h4>
-            <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
-              Complete payment to book your session
-            </p>
+          {/* What to Expect - Full Width Below */}
+          <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(24px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '24px', position: 'relative', overflow: 'hidden' }}>
+            {/* Decorative elements */}
+            <svg
+              style={{ position: 'absolute', top: '16px', right: '16px', opacity: 0.15, width: '60px', height: '60px' }}
+              viewBox="0 0 24 24"
+              fill="#FF6F81"
+            >
+              <path d="M12 2l1.8 5.6H20l-4.8 3.5L17 17l-5-3.6L7 17l1.8-5.9L4 7.6h6.2z" />
+            </svg>
+            <svg
+              style={{ position: 'absolute', bottom: '20px', left: '20px', opacity: 0.1, width: '50px', height: '50px' }}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#4ECDC4"
+              strokeWidth="2"
+            >
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
 
-            <div style={{ textAlign: 'center' }}>
-              <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
-                Pay via UPI
-              </h5>
-              <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
-                Transfer ₹2000 to the UPI ID or scan the QR below.
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Image
-                  src="/QR_Code.jpeg"
-                  alt="UPI QR Code for payment"
-                  width={200}
-                  height={200}
-                  style={{ borderRadius: '8px', border: '2px solid #E0D5C7' }}
-                />
-              </div>
-            </div>
+            <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '22px', margin: '0 0 24px', color: '#2B2420', position: 'relative' }}>
+              What to expect
+            </h4>
+            <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '18px', position: 'relative' }}>
+              <li style={{ fontSize: '16px', lineHeight: 1.7, color: '#4A3F36', display: 'flex', gap: '12px', fontWeight: 500 }}>
+                <span style={{ color: '#C2445B', fontWeight: 700, fontSize: '18px' }}>→</span>
+                <span>We'll confirm fit and availability for a consultation call.</span>
+              </li>
+              <li style={{ fontSize: '16px', lineHeight: 1.7, color: '#4A3F36', display: 'flex', gap: '12px', fontWeight: 500 }}>
+                <span style={{ color: '#C2445B', fontWeight: 700, fontSize: '18px' }}>→</span>
+                <span>If it feels aligned, we'll move forward with a first session.</span>
+              </li>
+              <li style={{ fontSize: '16px', lineHeight: 1.7, color: '#4A3F36', display: 'flex', gap: '12px', fontWeight: 500 }}>
+                <span style={{ color: '#C2445B', fontWeight: 700, fontSize: '18px' }}>→</span>
+                <span>If now isn't the right time, I'll make sure you leave with thoughtful next steps.</span>
+              </li>
+            </ul>
           </div>
         </div>
 
