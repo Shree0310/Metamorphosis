@@ -114,6 +114,9 @@ export default function BookNowPage() {
             <Link href="/faq" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
               FAQ
             </Link>
+            <Link href="/contact" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+              Contact Us
+            </Link>
             <span className="inline-block" style={{ background: '#FF6F81', color: '#FFFBF2', borderRadius: 0, padding: '12px 26px', fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '14.5px' }}>
               Book a Session
             </span>
@@ -161,6 +164,15 @@ export default function BookNowPage() {
                 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
               >
                 FAQ
+              </Link>
+              <Link
+                href="/contact"
+                scroll={false}
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                Contact Us
               </Link>
               <span
                 className="inline-block text-center"
@@ -299,12 +311,12 @@ export default function BookNowPage() {
         </div>
 
         {/* Calendar Container */}
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ background: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', overflow: 'hidden', padding: '32px 24px 24px' }}>
             {/* Calendar Heading */}
             <div style={{ textAlign: 'left', marginBottom: '8px' }}>
               <h2 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 32px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420', margin: '0 0 6px' }}>
-                Option 1: Book Your Time Slot
+                Book Your Time Slot
               </h2>
               <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: 0 }}>
                 Ready to schedule? Choose a convenient time for your therapy session
@@ -340,340 +352,113 @@ export default function BookNowPage() {
           </div>
         </div>
 
-        {/* OR Divider */}
-        <div style={{ maxWidth: '1100px', margin: '60px auto', textAlign: 'center', position: 'relative' }}>
-          <div style={{ position: 'absolute', top: '50%', left: 0, right: 0, height: '1px', background: '#E0D5C7' }}></div>
-          <span style={{
-            position: 'relative',
-            background: '#FDEEEF',
-            padding: '0 24px',
-            fontFamily: 'var(--font-baloo)',
-            fontWeight: 700,
-            fontSize: '24px',
-            color: '#C2445B'
-          }}>
-            OR
-          </span>
-        </div>
+        {/* Information Section */}
+        <div style={{ maxWidth: '1200px', margin: '60px auto 0' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+            {/* What to Expect */}
+            <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+              <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
+                What to expect
+              </h4>
+              <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
+                  <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
+                  <span>We'll confirm fit and availability for a consultation call.</span>
+                </li>
+                <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
+                  <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
+                  <span>If it feels aligned, we'll move forward with a first session.</span>
+                </li>
+                <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
+                  <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
+                  <span>If now isn't the right time, I'll make sure you leave with thoughtful next steps.</span>
+                </li>
+              </ul>
+            </div>
 
-        {/* Contact Form Section */}
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          {!submitted ? (
-            <div>
-              <div style={{ marginBottom: '24px', textAlign: 'center' }}>
-                <h2 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 32px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420', margin: '0 0 6px' }}>
-                  Option 2: Send Your Query
-                </h2>
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: 0 }}>
-                  Have questions first? Fill in your details and I'll get back to you
-                </p>
-              </div>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'start' }}>
-                {/* Form */}
-                <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
-                  <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 24px', color: '#2B2420' }}>
-                    Your Details
-                  </h4>
-                  <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                  {/* Name */}
-                  <label style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      Name <span style={{ color: '#C2445B' }}>*</span>
-                    </span>
-                    <input
-                      required
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      style={{
-                        background: '#FBF3EF',
-                        border: '1px solid #E0D5C7',
-                        padding: '12px 15px',
-                        fontFamily: 'var(--font-kalam)',
-                        fontSize: '16px',
-                        color: '#2B2420',
-                        borderRadius: 0,
-                      }}
-                    />
-                  </label>
+            {/* Availability and Fees */}
+            <div style={{ background: '#FBF3EF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
+              <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 24px', color: '#2B2420' }}>
+                Availability and Fees
+              </h4>
 
-                  {/* Email */}
-                  <label style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      Email address <span style={{ color: '#C2445B' }}>*</span>
-                    </span>
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      style={{
-                        background: '#FBF3EF',
-                        border: '1px solid #E0D5C7',
-                        padding: '12px 15px',
-                        fontFamily: 'var(--font-kalam)',
-                        fontSize: '16px',
-                        color: '#2B2420',
-                        borderRadius: 0,
-                      }}
-                    />
-                  </label>
-
-                  {/* Contact Number */}
-                  <label style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      Contact number <span style={{ color: '#C2445B' }}>*</span>
-                    </span>
-                    <input
-                      required
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      style={{
-                        background: '#FBF3EF',
-                        border: '1px solid #E0D5C7',
-                        padding: '12px 15px',
-                        fontFamily: 'var(--font-kalam)',
-                        fontSize: '16px',
-                        color: '#2B2420',
-                        borderRadius: 0,
-                      }}
-                    />
-                  </label>
-
-                  {/* Service Needed */}
-                  <label style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      Service needed <span style={{ color: '#C2445B' }}>*</span>
-                    </span>
-                    <select
-                      required
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      style={{
-                        background: '#FBF3EF',
-                        border: '1px solid #E0D5C7',
-                        padding: '12px 15px',
-                        fontFamily: 'var(--font-kalam)',
-                        fontSize: '16px',
-                        color: formData.service === '' ? '#8A7B6C' : '#2B2420',
-                        borderRadius: 0,
-                        cursor: 'pointer',
-                        appearance: 'none',
-                        backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C2445B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'right 12px center',
-                        backgroundSize: '20px',
-                        paddingRight: '40px',
-                      }}
-                    >
-                      <option value="" style={{ color: '#8A7B6C' }}>Select a service</option>
-                      <option value="Individual Therapy" style={{ color: '#2B2420' }}>Individual Therapy</option>
-                      <option value="Couples Therapy" style={{ color: '#2B2420' }}>Couples Therapy</option>
-                      <option value="Supervision" style={{ color: '#2B2420' }}>Supervision</option>
-                    </select>
-                  </label>
-
-                  {/* Referred By */}
-                  <label style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      Referred by <span style={{ color: '#C2445B' }}>*</span>
-                    </span>
-                    <input
-                      required
-                      name="referredBy"
-                      value={formData.referredBy}
-                      onChange={handleChange}
-                      style={{
-                        background: '#FBF3EF',
-                        border: '1px solid #E0D5C7',
-                        padding: '12px 15px',
-                        fontFamily: 'var(--font-kalam)',
-                        fontSize: '16px',
-                        color: '#2B2420',
-                        borderRadius: 0,
-                      }}
-                    />
-                  </label>
-
-                  {/* Message */}
-                  <label style={{ display: 'flex', flexDirection: 'column' }}>
-                    <span style={{ fontSize: '14px', fontWeight: 700, color: '#2B2420', marginBottom: '8px' }}>
-                      What would you like to talk about? <span style={{ color: '#C2445B' }}>*</span>
-                    </span>
-                    <textarea
-                      required
-                      name="message"
-                      rows={4}
-                      value={formData.message}
-                      onChange={handleChange}
-                      style={{
-                        background: '#FBF3EF',
-                        border: '1px solid #E0D5C7',
-                        padding: '12px 15px',
-                        fontFamily: 'var(--font-kalam)',
-                        fontSize: '16px',
-                        color: '#2B2420',
-                        borderRadius: 0,
-                        resize: 'vertical',
-                      }}
-                    />
-                  </label>
-
-                  {/* Submit Button */}
-                  <div style={{ textAlign: 'center', marginTop: '8px' }}>
-                    <button
-                      type="submit"
-                      className="inline-block no-underline"
-                      style={{
-                        background: '#FF6F81',
-                        color: '#FFFBF2',
-                        padding: '15px 40px',
-                        fontFamily: 'var(--font-baloo)',
-                        fontWeight: 700,
-                        fontSize: '16px',
-                        border: 'none',
-                        borderRadius: 0,
-                        cursor: 'pointer',
-                      }}
-                    >
-                      Submit Details
-                    </button>
-                  </div>
-                </form>
-                </div>
-
-                {/* Sidebar with What to Expect and Availability & Fees */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                  {/* What to Expect */}
-                  <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
-                    <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
-                      What to expect
-                    </h4>
-                    <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                      <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                        <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                        <span>We'll confirm fit and availability for a consultation call.</span>
-                      </li>
-                      <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                        <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                        <span>If it feels aligned, we'll move forward with a first session.</span>
-                      </li>
-                      <li style={{ fontSize: '15px', lineHeight: 1.6, color: '#4A3F36', display: 'flex', gap: '10px' }}>
-                        <span style={{ color: '#C2445B', fontWeight: 700 }}>→</span>
-                        <span>If now isn't the right time, I'll make sure you leave with thoughtful next steps.</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  {/* Availability and Fees */}
-                  <div style={{ background: '#FBF3EF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)' }}>
-                    <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 24px', color: '#2B2420' }}>
-                      Availability and Fees
-                    </h4>
-
-                    {/* Consultation hours */}
-                    <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
-                      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
-                        <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
-                          Consultation hours
-                        </span>
-                        <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
-                          <p style={{ margin: '0 0 4px' }}>Tuesdays to Fridays - 11 am to 7 pm</p>
-                          <p style={{ margin: 0 }}>Saturdays - 11 am to 5 pm</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Session duration */}
-                    <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
-                      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
-                        <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
-                          Session duration
-                        </span>
-                        <span style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
-                          60 minutes
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Fee per session */}
-                    <div>
-                      <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
-                        <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
-                          Fee per session
-                        </span>
-                        <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
-                          <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living in India</p>
-                          <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹2500</p>
-                          <p style={{ margin: '0 0 20px' }}>Couples Therapy - ₹4000</p>
-
-                          <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living/studying abroad</p>
-                          <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹3500</p>
-                          <p style={{ margin: '0 0 3px' }}>Couples Therapy - ₹5000</p>
-                          <p style={{ margin: 0 }}>Supervision - ₹1200 to ₹2200</p>
-                        </div>
-                      </div>
-                    </div>
+              {/* Consultation hours */}
+              <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
+                <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                  <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                    Consultation hours
+                  </span>
+                  <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                    <p style={{ margin: '0 0 4px' }}>Tuesdays to Fridays - 11 am to 7 pm</p>
+                    <p style={{ margin: 0 }}>Saturdays - 11 am to 5 pm</p>
                   </div>
                 </div>
               </div>
 
-              {/* Reassuring Message Box */}
-              <div style={{ background: '#FFFFFF', border: '2px solid #E0D5C7', padding: 'clamp(24px, 5vw, 32px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '32px' }}>
-                <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 16px', color: '#2B2420' }}>
-                  You don't have to have it all figured out.
-                </h4>
-                <p style={{ fontSize: '16px', lineHeight: 1.7, color: '#4A3F36', margin: 0 }}>
-                  There's no right way to begin. Whether you book a call, send a WhatsApp message, or simply sit with this page for a while — all of that is okay.
-                </p>
+              {/* Session duration */}
+              <div style={{ marginBottom: '20px', paddingBottom: '20px', borderBottom: '1px solid #E0D5C7' }}>
+                <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                  <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                    Session duration
+                  </span>
+                  <span style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                    60 minutes
+                  </span>
+                </div>
               </div>
 
-              {/* Payment Options - Full Width Below Form */}
-              <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '40px' }}>
-                <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
-                  Payment Options
-                </h4>
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
-                  Complete payment to book your session
-                </p>
+              {/* Fee per session */}
+              <div>
+                <div style={{ display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+                  <span style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', color: '#2B2420', minWidth: '140px', flexShrink: 0 }}>
+                    Fee per session
+                  </span>
+                  <div style={{ fontSize: '15px', lineHeight: 1.7, color: '#4A3F36' }}>
+                    <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living in India</p>
+                    <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹2500</p>
+                    <p style={{ margin: '0 0 20px' }}>Couples Therapy - ₹4000</p>
 
-                <div style={{ textAlign: 'center' }}>
-                  <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
-                    Pay via UPI
-                  </h5>
-                  <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
-                    Transfer ₹2000 to the UPI ID or scan the QR below.
-                  </p>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Image
-                      src="/QR_Code.jpeg"
-                      alt="UPI QR Code for payment"
-                      width={200}
-                      height={200}
-                      style={{ borderRadius: '8px', border: '2px solid #E0D5C7' }}
-                    />
+                    <p style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', margin: '0 0 6px', color: '#2B2420' }}>Clients living/studying abroad</p>
+                    <p style={{ margin: '0 0 3px' }}>Individual Therapy - ₹3500</p>
+                    <p style={{ margin: '0 0 3px' }}>Couples Therapy - ₹5000</p>
+                    <p style={{ margin: 0 }}>Supervision - ₹1200 to ₹2200</p>
                   </div>
                 </div>
               </div>
             </div>
-          ) : (
-            <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: '44px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', textAlign: 'center' }}>
-              <h3 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '22px', margin: '0 0 12px', color: '#2B2420' }}>
-                Thank you, {formData.name}!
-              </h3>
-              <p style={{ fontSize: '17px', lineHeight: 1.6, color: '#4A3F36', margin: 0 }}>
-                Your message has been received. I'll reach out within 2 working days.
+          </div>
+
+          {/* Payment Options - Full Width Below */}
+          <div style={{ background: '#FFFFFF', border: '1px solid #E0D5C7', padding: 'clamp(20px, 5vw, 40px)', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', marginTop: '24px' }}>
+            <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 20px', color: '#2B2420' }}>
+              Payment Options
+            </h4>
+            <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
+              Complete payment to book your session
+            </p>
+
+            <div style={{ textAlign: 'center' }}>
+              <h5 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '18px', margin: '0 0 16px', color: '#2B2420' }}>
+                Pay via UPI
+              </h5>
+              <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#4A3F36', margin: '0 0 24px' }}>
+                Transfer ₹2000 to the UPI ID or scan the QR below.
               </p>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Image
+                  src="/QR_Code.jpeg"
+                  alt="UPI QR Code for payment"
+                  width={200}
+                  height={200}
+                  style={{ borderRadius: '8px', border: '2px solid #E0D5C7' }}
+                />
+              </div>
             </div>
-          )}
+          </div>
         </div>
 
         {/* Quick FAQs Section */}
-        <div style={{ maxWidth: '1100px', margin: '80px auto 0' }}>
+        <div style={{ maxWidth: '1100px', margin: '60px auto 0' }}>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <span className="block text-sm uppercase" style={{ fontWeight: 700, letterSpacing: '0.1em', margin: '0 0 12px', color: '#C2445B', fontSize: '15px' }}>
               QUESTIONS YOU MIGHT HAVE

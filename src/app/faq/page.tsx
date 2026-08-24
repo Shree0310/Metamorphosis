@@ -214,6 +214,9 @@ export default function FAQPage() {
             <span className="text-base text-[#2B2420]" style={{ fontWeight: 500, textDecoration: 'underline', textUnderlineOffset: '4px', textDecorationColor: '#C2445B' }}>
               FAQ
             </span>
+            <Link href="/contact" scroll={false} className="text-base text-[#2B2420] hover:text-[#C2445B] hover:no-underline" style={{ fontWeight: 500, textDecoration: 'none' }}>
+              Contact Us
+            </Link>
             <Link
               href="/book-now"
               scroll={false}
@@ -264,6 +267,15 @@ export default function FAQPage() {
               >
                 FAQ
               </span>
+              <Link
+                href="/contact"
+                scroll={false}
+                onClick={() => setMenuOpen(false)}
+                className="text-xl text-[#2B2420] hover:text-[#C2445B] hover:no-underline"
+                style={{ fontFamily: 'var(--font-baloo)', fontWeight: 600, textDecoration: 'none' }}
+              >
+                Contact Us
+              </Link>
               <Link
                 href="/book-now"
                 scroll={false}
