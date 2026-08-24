@@ -536,13 +536,14 @@ export default function AboutPageContent() {
             Book a free intro call and see if we're a good fit — no commitment, just a conversation.
           </p>
           <div className="mt-7">
-            <button
-              type="button"
-              className="cursor-pointer border-0 bg-[#2B2420] px-7 py-3 text-[#FFFBF2] hover:bg-[#4A3F36]"
-              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px' }}
+            <Link
+              href="/book-now"
+              scroll={false}
+              className="inline-block cursor-pointer border-0 bg-[#2B2420] px-7 py-3 text-[#FFFBF2] hover:bg-[#4A3F36] hover:no-underline"
+              style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '15px', textDecoration: 'none' }}
             >
               Book a Session
-            </button>
+            </Link>
           </div>
         </div>
       </section>
