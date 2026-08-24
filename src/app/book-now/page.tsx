@@ -306,7 +306,7 @@ export default function BookNowPage() {
             Book a Session
           </h1>
           <p style={{ fontSize: '18px', lineHeight: 1.6, color: '#4A3F36', maxWidth: '60ch', margin: '0 auto' }}>
-            Book directly or send your query — I'll respond within 2 working days
+            Book directly or <Link href="/contact" scroll={false} style={{ color: '#C2445B', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 600 }}>send your query</Link> — I'll respond within 2 working days
           </p>
         </div>
 
