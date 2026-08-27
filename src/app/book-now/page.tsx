@@ -33,18 +33,18 @@ interface SessionConfig {
 
 const sessionConfigs: Record<SessionType, SessionConfig> = {
   individual: {
-    namespace: 'individual-session',
-    calLink: 'sourashree-banerjee-vnxoqo/individual-session',
+    namespace: 'individual-therapy',
+    calLink: 'kuntal-vora/individual-therapy',
     label: 'Individual Session'
   },
   couple: {
-    namespace: 'couple-session',
-    calLink: 'sourashree-banerjee-vnxoqo/couple-session',
+    namespace: 'couple-therapy',
+    calLink: 'kuntal-vora/couple-therapy',
     label: 'Couple Session'
   },
   supervision: {
     namespace: 'supervision',
-    calLink: 'sourashree-banerjee-vnxoqo/supervision',
+    calLink: 'kuntal-vora/supervision',
     label: 'Supervision'
   }
 };
@@ -346,7 +346,7 @@ export default function BookNowPage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ background: '#FFFFFF', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)', overflow: 'hidden', padding: '32px 24px 24px' }}>
             {/* Calendar Heading */}
-            <div style={{ textAlign: 'left', marginBottom: '20px' }}>
+            <div style={{ textAlign: 'left', marginBottom: '24px' }}>
               <h2 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: 'clamp(24px, 3vw, 32px)', lineHeight: 1.2, letterSpacing: '-0.01em', color: '#2B2420', margin: '0 0 6px' }}>
                 Book Your Time Slot
               </h2>
@@ -355,44 +355,56 @@ export default function BookNowPage() {
               </p>
             </div>
 
-            {/* Session Type Tabs */}
-            <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', borderBottom: '2px solid #F0EBE3', paddingBottom: '0', flexWrap: 'wrap' }}>
-              {(Object.keys(sessionConfigs) as SessionType[]).map((sessionType) => (
-                <button
-                  key={sessionType}
-                  onClick={() => setSelectedSession(sessionType)}
-                  style={{
-                    fontFamily: 'var(--font-baloo)',
-                    fontWeight: 600,
-                    fontSize: '15px',
-                    padding: '12px 20px',
-                    border: 'none',
-                    background: 'transparent',
-                    color: selectedSession === sessionType ? '#C2445B' : '#6B5D50',
-                    cursor: 'pointer',
-                    borderBottom: selectedSession === sessionType ? '3px solid #C2445B' : '3px solid transparent',
-                    marginBottom: '-2px',
-                    transition: 'all 0.2s ease',
-                    position: 'relative'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (selectedSession !== sessionType) {
-                      e.currentTarget.style.color = '#4A3F36';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (selectedSession !== sessionType) {
-                      e.currentTarget.style.color = '#6B5D50';
-                    }
-                  }}
-                >
-                  {sessionConfigs[sessionType].label}
-                </button>
-              ))}
-            </div>
+            {/* Two-column layout: Tabs on left, Calendar on right */}
+            <div style={{ display: 'flex', gap: '24px', flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+              {/* Session Type Tabs - Left Side */}
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+                minWidth: '220px',
+                maxWidth: '220px',
+                flexShrink: 0
+              }}>
+                {(Object.keys(sessionConfigs) as SessionType[]).map((sessionType) => (
+                  <button
+                    key={sessionType}
+                    onClick={() => setSelectedSession(sessionType)}
+                    style={{
+                      fontFamily: 'var(--font-baloo)',
+                      fontWeight: 600,
+                      fontSize: '16px',
+                      padding: '16px 20px',
+                      border: 'none',
+                      background: selectedSession === sessionType ? '#FFF5F7' : 'transparent',
+                      color: selectedSession === sessionType ? '#C2445B' : '#6B5D50',
+                      cursor: 'pointer',
+                      borderLeft: selectedSession === sessionType ? '4px solid #C2445B' : '4px solid transparent',
+                      borderRadius: '4px',
+                      transition: 'all 0.2s ease',
+                      textAlign: 'left',
+                      position: 'relative'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (selectedSession !== sessionType) {
+                        e.currentTarget.style.background = '#FBF3EF';
+                        e.currentTarget.style.color = '#4A3F36';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (selectedSession !== sessionType) {
+                        e.currentTarget.style.background = 'transparent';
+                        e.currentTarget.style.color = '#6B5D50';
+                      }
+                    }}
+                  >
+                    {sessionConfigs[sessionType].label}
+                  </button>
+                ))}
+              </div>
 
-            {/* Calendar Embed with Loading State */}
-            <div style={{ position: 'relative', minHeight: '650px' }}>
+              {/* Calendar Embed with Loading State - Right Side */}
+              <div style={{ position: 'relative', minHeight: '650px', flex: 1, minWidth: '300px' }}>
               {isCalLoading && (
                 <div style={{
                   position: 'absolute',
@@ -417,13 +429,14 @@ export default function BookNowPage() {
                   }}></div>
                 </div>
               )}
-              <Cal
-                key={selectedSession}
-                namespace={sessionConfigs[selectedSession].namespace}
-                calLink={sessionConfigs[selectedSession].calLink}
-                style={{ width: "100%", height: "100%", minHeight: "650px", overflow: "scroll" }}
-                config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
-              />
+                <Cal
+                  key={selectedSession}
+                  namespace={sessionConfigs[selectedSession].namespace}
+                  calLink={sessionConfigs[selectedSession].calLink}
+                  style={{ width: "100%", height: "100%", minHeight: "650px", overflow: "scroll" }}
+                  config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+                />
+              </div>
             </div>
 
             {/* Fallback Link */}
