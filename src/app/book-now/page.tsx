@@ -64,9 +64,30 @@ export default function BookNowPage() {
       const cal = await getCalApi({ namespace: config.namespace });
       cal("ui", {
         theme: "light",
+        styles: {
+          branding: {
+            brandColor: "#FF6F81",
+          },
+        },
         cssVarsPerTheme: {
-          light: { "cal-brand": "#FF6F81" },
-          dark: { "cal-brand": "#FF6F81" }
+          light: {
+            "cal-brand": "#FF6F81",
+            "cal-brand-emphasis": "#C2445B",
+            "cal-brand-text": "white",
+            "cal-bg": "white",
+            "cal-bg-emphasis": "#FBF3EF",
+            "cal-text": "#2B2420",
+            "cal-text-emphasis": "#4A3F36"
+          },
+          dark: {
+            "cal-brand": "#FF6F81",
+            "cal-brand-emphasis": "#C2445B",
+            "cal-brand-text": "white",
+            "cal-bg": "white",
+            "cal-bg-emphasis": "#FBF3EF",
+            "cal-text": "#2B2420",
+            "cal-text-emphasis": "#4A3F36"
+          }
         },
         hideEventTypeDetails: false,
         layout: "month_view"
