@@ -378,7 +378,7 @@ export default function ServicesPage() {
       <footer style={{ padding: '48px clamp(20px, 5vw, 72px) 48px', maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '24px', justifyContent: 'space-between', alignItems: 'flex-start', fontSize: '13px', lineHeight: 1.6, color: '#6B5D50' }}>
           <div>
-            <p style={{ margin: 0 }}>therapy.metamorphosis@gmail.com</p>
+            <p style={{ margin: 0 }}>hello@metamorphosistherapy.in</p>
             <p style={{ margin: '4px 0 0' }}>Mumbai, Maharashtra, India</p>
           </div>
           <div style={{ display: 'flex', gap: '16px' }}>

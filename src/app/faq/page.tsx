@@ -513,7 +513,7 @@ export default function FAQPage() {
       <footer className="mx-auto max-w-6xl px-5 py-12 sm:px-8 lg:px-16">
         <div className="flex flex-wrap items-start justify-between gap-6 text-sm leading-relaxed text-[#6B5D50]">
           <div>
-            <p className="m-0" style={{ fontWeight: 500 }}>therapy.metamorphosis@gmail.com</p>
+            <p className="m-0" style={{ fontWeight: 500 }}>hello@metamorphosistherapy.in</p>
             <p className="mt-1" style={{ fontWeight: 500 }}>Mumbai, Maharashtra, India</p>
           </div>
           <div className="flex gap-4">
