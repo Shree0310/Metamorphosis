@@ -262,7 +262,7 @@ export default function AboutPageContent() {
               style={{ borderRadius: '50% 50% 0 0 / 40% 40% 0 0' }}
             >
               <Image
-                src="/Profile_Pic.jpg"
+                src="/Profile_Pic_About.jpg"
                 alt="Kuntal - Counseling Psychologist"
                 width={400}
                 height={500}
@@ -423,7 +423,7 @@ export default function AboutPageContent() {
             I run a fully virtual practice where I see Indian individuals and couples all around the world, alongside supervision for early-career and mid-career therapists, individually and in groups. I keep up my own personal therapy and regular supervision — to take care of myself, personally and professionally.
           </p>
           <p className="mt-5 text-lg leading-relaxed text-[#4A3F36] sm:text-xl" style={{ fontWeight: 500 }}>
-            I started Metamorphosis with the intention of representing the changes that happen when we start taking care of ourselves — not just the big, momentous ones, but the small, tentative ones too. It's not just about the butterflies. It's about the cocoon as well.
+            I started Metamorphosis Therapy Initiative with the intention of representing the changes that happen when we start taking care of ourselves — not just the big, momentous ones, but the small, tentative ones too. It's not just about the butterflies. It's about the cocoon as well.
           </p>
         </div>
       </section>

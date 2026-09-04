@@ -344,7 +344,7 @@ export default function Home() {
           <div data-reveal className="relative z-10 grid items-center gap-12 md:grid-cols-[260px_1fr]">
             <figure className="m-0">
               <Image
-                src="/Profile_Pic.jpg"
+                src="/Profile_Pic_Homepage.jpg"
                 alt="Kuntal - Counseling Psychologist"
                 width={260}
                 height={325}

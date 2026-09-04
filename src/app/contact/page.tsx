@@ -431,8 +431,11 @@ export default function ContactPage() {
                 <h4 style={{ fontFamily: 'var(--font-baloo)', fontWeight: 700, fontSize: '20px', margin: '0 0 16px', color: '#2B2420' }}>
                   You don't have to have it all figured out.
                 </h4>
+                <p style={{ fontSize: '16px', lineHeight: 1.7, color: '#4A3F36', margin: '0 0 16px' }}>
+                  There's no right way to begin. Whether you send a message, or simply sit with this page for a while — all of that is okay.
+                </p>
                 <p style={{ fontSize: '16px', lineHeight: 1.7, color: '#4A3F36', margin: 0 }}>
-                  There's no right way to begin. Whether you send a message, <Link href="/book-now" scroll={false} style={{ color: '#C2445B', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 600 }}>book a call</Link>, or simply sit with this page for a while — all of that is okay.
+                  If you are an existing client or supervisee, you can directly book the session by going to this link: <Link href="/book-now" scroll={false} style={{ color: '#C2445B', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 600 }}>Book a Session</Link>
                 </p>
               </div>
             </div>
