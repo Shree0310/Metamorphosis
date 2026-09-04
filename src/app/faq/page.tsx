@@ -537,15 +537,12 @@ export default function FAQPage() {
           Online services are not suitable for crises or emergencies. Please visit your nearest mental health center or a helpline if you need immediate support.
         </p>
         <div className="mt-4 flex flex-wrap gap-5">
-          <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
+          <Link href="/privacy-policy" className="text-xs text-[#8A7B6C] hover:underline">
             Privacy Policy
-          </a>
-          <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
-            Terms of Service
-          </a>
-          <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
+          </Link>
+          <Link href="/cancellation-policy" className="text-xs text-[#8A7B6C] hover:underline">
             Cancellation Policy
-          </a>
+          </Link>
         </div>
         <p className="mt-4 text-xs text-[#8A7B6C]" style={{ fontWeight: 500 }}>© 2026 Metamorphosis Therapy Initiative</p>
       </footer>

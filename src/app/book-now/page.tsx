@@ -883,9 +883,8 @@ export default function BookNowPage() {
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '16px' }}>
           <Link href="/faq" scroll={false} style={{ fontSize: '12.5px', color: '#8A7B6C' }}>FAQ</Link>
-          <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Privacy Policy</a>
-          <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Terms of Service</a>
-          <a href="#" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Cancellation Policy</a>
+          <Link href="/privacy-policy" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Privacy Policy</Link>
+          <Link href="/cancellation-policy" style={{ fontSize: '12.5px', color: '#8A7B6C' }}>Cancellation Policy</Link>
         </div>
         <p style={{ fontSize: '12.5px', margin: '16px 0 0', color: '#8A7B6C' }}>© 2026 Metamorphosis Therapy Initiative</p>
       </footer>

@@ -570,15 +570,12 @@ export default function AboutPageContent() {
           <Link href="/faq" scroll={false} className="text-xs text-[#8A7B6C] hover:underline">
             FAQ
           </Link>
-          <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
+          <Link href="/privacy-policy" className="text-xs text-[#8A7B6C] hover:underline">
             Privacy Policy
-          </a>
-          <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
-            Terms of Service
-          </a>
-          <a href="#" className="text-xs text-[#8A7B6C] hover:underline">
+          </Link>
+          <Link href="/cancellation-policy" className="text-xs text-[#8A7B6C] hover:underline">
             Cancellation Policy
-          </a>
+          </Link>
         </div>
         <p className="mt-4 text-xs text-[#8A7B6C]" style={{ fontWeight: 500 }}>© 2026 Metamorphosis Therapy Initiative</p>
       </footer>
